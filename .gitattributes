@@ -1,0 +1,6 @@
+# 确保 public 目录下的文件不被转换换行符
+* text=auto
+public/** -text
+*.css -text
+*.js -text
+*.html -text
