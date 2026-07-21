@@ -1,0 +1,1785 @@
+<!doctype html>
+<html
+  lang="cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>《博德之门3》设计分析 &middot; IanT&#39;s Portfolio</title>
+    <meta name="title" content="《博德之门3》设计分析 &middot; IanT&#39;s Portfolio">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="Iant&#39;s Portfolio">
+  
+  
+  
+  
+  <link rel="canonical" href="https://iant72.github.io/posts/03/">
+  
+  
+
+  
+  
+    <meta name="author" content="IanT">
+  
+  
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://iant72.github.io/posts/03/">
+	<meta property="og:site_name" content="IanT&#39;s Portfolio">
+	<meta property="og:title" content="《博德之门3》设计分析">
+	<meta property="og:description" content="Iant&#39;s Portfolio">
+	<meta property="og:locale" content="zh_cn">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="og:image" content="https://iant72.github.io/posts/03/feature.jpg">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://iant72.github.io/posts/03/feature.jpg">
+	<meta name="twitter:title" content="《博德之门3》设计分析">
+	<meta name="twitter:description" content="Iant&#39;s Portfolio">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.4328b1cfaef3072c5ad82c0c9f71aa621a243cc4f997b831bddc297546ef48cc85156dc77f0d5ab7def6e77dfef28f8e44a4f0151e348ffe8f47f0d8a3980bd2.css"
+    integrity="sha512-Qyixz67zByxa2CwMn3GqYhokPMT5l7gxvdwpdUbvSMyFFW3Hfw1at972533&#43;8o&#43;ORKTwFR40j/6PR/DYo5gL0g==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.8c1f64a5b2f9380667d8dd7d8a3ae62e56ba2e0b8021d8a2f634d63d50fc90dd376d4fddb9ff5a6b0a9ebbc5515e007031e2eb6ae94c1e5238aa2edb8296f7da.js"
+      integrity="sha512-jB9kpbL5OAZn2N19ijrmLla6LguAIdii9jTWPVD8kN03bU/duf9aawqeu8VRXgBwMeLraulMHlI4qi7bgpb32g=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "《博德之门3》设计分析",
+    "headline": "《博德之门3》设计分析",
+    
+    "inLanguage": "zh-cn",
+    "url" : "https://iant72.github.io/posts/03/",
+    "author" : {
+      "@type": "Person",
+      "name": "IanT"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "224"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl bg-neutral/25 dark:bg-neutral-800/25"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      IanT&rsquo;s Portfolio
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+  
+  
+  
+  <div class="overflow-hidden h-36 md:h-56 lg:h-72">
+    <img
+      src="/posts/03/feature_hu_21388e29b2fda91d.jpg"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="w-full h-full nozoom object-cover"
+      >
+  </div>
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        《博德之门3》设计分析
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#核心玩法">核心玩法</a>
+      <ul>
+        <li><a href="#核心玩法循环">核心玩法循环</a></li>
+        <li><a href="#核心体验">核心体验</a></li>
+        <li><a href="#核心玩法的设计思路">核心玩法的设计思路</a>
+          <ul>
+            <li><a href="#核心体验拆解">核心体验拆解</a></li>
+            <li><a href="#追问">追问</a></li>
+          </ul>
+        </li>
+        <li><a href="#核心玩法与游戏系统框架如何结合">核心玩法与游戏系统框架如何结合</a>
+          <ul>
+            <li><a href="#探索系统">探索系统</a></li>
+            <li><a href="#社交系统">社交系统</a></li>
+            <li><a href="#战斗系统">战斗系统</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#亮点">亮点</a>
+      <ul>
+        <li><a href="#目的">目的</a></li>
+        <li><a href="#设计思路">设计思路</a>
+          <ul>
+            <li><a href="#环境交互">环境交互</a></li>
+            <li><a href="#叙事">叙事</a></li>
+          </ul>
+        </li>
+        <li><a href="#法术">法术</a></li>
+      </ul>
+    </li>
+    <li><a href="#属性值的数值设计">属性值的数值设计</a>
+      <ul>
+        <li><a href="#有限分配">有限分配</a>
+          <ul>
+            <li><a href="#目的-1">目的</a></li>
+          </ul>
+        </li>
+        <li><a href="#不同职业依赖不同属性">不同职业依赖不同属性</a>
+          <ul>
+            <li><a href="#目的-2">目的</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#与神界原罪2比较">与《神界原罪2》比较</a>
+      <ul>
+        <li><a href="#关键差异">关键差异</a></li>
+        <li><a href="#优势">优势</a></li>
+        <li><a href="#劣势">劣势</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#核心玩法">核心玩法</a>
+      <ul>
+        <li><a href="#核心玩法循环">核心玩法循环</a></li>
+        <li><a href="#核心体验">核心体验</a></li>
+        <li><a href="#核心玩法的设计思路">核心玩法的设计思路</a>
+          <ul>
+            <li><a href="#核心体验拆解">核心体验拆解</a></li>
+            <li><a href="#追问">追问</a></li>
+          </ul>
+        </li>
+        <li><a href="#核心玩法与游戏系统框架如何结合">核心玩法与游戏系统框架如何结合</a>
+          <ul>
+            <li><a href="#探索系统">探索系统</a></li>
+            <li><a href="#社交系统">社交系统</a></li>
+            <li><a href="#战斗系统">战斗系统</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#亮点">亮点</a>
+      <ul>
+        <li><a href="#目的">目的</a></li>
+        <li><a href="#设计思路">设计思路</a>
+          <ul>
+            <li><a href="#环境交互">环境交互</a></li>
+            <li><a href="#叙事">叙事</a></li>
+          </ul>
+        </li>
+        <li><a href="#法术">法术</a></li>
+      </ul>
+    </li>
+    <li><a href="#属性值的数值设计">属性值的数值设计</a>
+      <ul>
+        <li><a href="#有限分配">有限分配</a>
+          <ul>
+            <li><a href="#目的-1">目的</a></li>
+          </ul>
+        </li>
+        <li><a href="#不同职业依赖不同属性">不同职业依赖不同属性</a>
+          <ul>
+            <li><a href="#目的-2">目的</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#与神界原罪2比较">与《神界原罪2》比较</a>
+      <ul>
+        <li><a href="#关键差异">关键差异</a></li>
+        <li><a href="#优势">优势</a></li>
+        <li><a href="#劣势">劣势</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">核心玩法
+    <div id="核心玩法" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">核心玩法循环
+    <div id="核心玩法循环" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95%e5%be%aa%e7%8e%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>养成／构筑 —— 验证（战斗、剧情及探索检定）—— 收获／反馈（经验值、装备、剧情影响等）</li>
+</ul>
+
+<h3 class="relative group">核心体验
+    <div id="核心体验" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e4%bd%93%e9%aa%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>玩家通过属性分配、职业选择与装备搭配构筑角色，在回合制战棋战斗、探索检定与对话选择中验证构筑成果，获得<strong>角色扮演即如同亲身经历的异世界冒险体验的满足感</strong>。</li>
+</ul>
+
+<h3 class="relative group">核心玩法的设计思路
+    <div id="核心玩法的设计思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95%e7%9a%84%e8%ae%be%e8%ae%a1%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>玩法设计即是为达成体验，搭建与玩家互动的规则。</p>
+
+<h4 class="relative group">核心体验拆解
+    <div id="核心体验拆解" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e4%bd%93%e9%aa%8c%e6%8b%86%e8%a7%a3" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>自由地交互；</p>
+</li>
+<li>
+<p>受玩家选择影响的冒险故事；</p>
+</li>
+<li>
+<p>角色的代入感，世界的真实感。</p>
+</li>
+</ol>
+<p>前两点也是第三点建立的基础。</p>
+
+<h4 class="relative group">追问
+    <div id="追问" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%bd%e9%97%ae" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>什么叫自由地交互？</p>
+<ul>
+<li>
+<p>在游戏中自由不是可以做任何事情，而是所有交给玩家的行为，施加在任何符合直觉的对象上，都可以获得应有的反馈。换句话说，游戏规则是值得信任的。</p>
+</li>
+<li>
+<p>这意味着，玩家可执行的行为是有限的，同时，所有的可交互物体都需要考虑对所有行为的反馈。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>这就衍伸出四个问题：</p>
+<ol>
+<li>
+<p>玩家有哪些可执行行为？</p>
+<ul>
+<li>
+<p>这与目标体验的第2点相关；</p>
+</li>
+<li>
+<p>同时还取决于游戏的背景与类型，因为游戏的背景与类型意味着一种承诺，某种体验要素的承诺（会被玩家下意识期待的东西）。</p>
+</li>
+<li>
+<p>故，需要进一步追问：</p>
+<ol>
+<li>
+<p>冒险故事有哪些必要的行为？</p>
+<ul>
+<li>
+<p>战斗、探索、交流</p>
+<ul>
+<li>什么样的战斗、探索与交流，可由下问统一回答。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>龙与地下城和crpg对玩家的行为做出了什么承诺？</p>
+<ol>
+<li>
+<p>剑与魔法的<strong>回合制策略与环境深度互动的战棋式战斗</strong>；</p>
+</li>
+<li>
+<p>基于角色属性、技能与装备构筑的战斗与判定；</p>
+</li>
+<li>
+<p>基于角色属性、技能检定的探索与交流。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>为什么是回合制？</p>
+<ul>
+<li>因为在战斗中，玩家获取到的<strong>信息</strong>太多（敌人的属性与位置、角色的属性、技能及效果、可能利用的环境与道具等），进行<strong>判断决策</strong>的时间需求便更多，若为即时<strong>操作</strong>，对玩家生理（反应与思考）挑战过高负担过重（一般人做不到）。</li>
+</ul>
+</li>
+<li>
+<p>为什么需要如此多的信息？</p>
+<ul>
+<li>因为游戏的目标<strong>体验</strong>是，“角色的代入感，世界的真实感。”</li>
+</ul>
+<ol>
+<li>
+<p>自定义角色是提高代入感的重要手段，而自定义的属性可以对核心系统及故事走向产生影响，便可以使代入感进一步加强（因为玩家所决定的，产生了真实的影响与反馈，而不是背景板）。</p>
+<ul>
+<li>
+<p>这便是构筑玩法在提高代入感方面的作用（装备与技能的选择是玩家个性的体现）。</p>
+</li>
+<li>
+<p>也因此，角色与敌人的技能装备属性的信息会很多。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>环境包含的信息越丰富，世界越真实；而如果环境的信息可以被利用（比如，敌人旁边有个坑，把敌人推下去可以摔死他），那么环境信息就超越了环境叙事的作用，更加地真实可信。</p>
+<ul>
+<li>因此，战斗时玩家需要获取的环境信息也很多。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>到此，可以初步得出玩家的可执行行为：</p>
+<ol>
+<li>
+<p>移动；</p>
+</li>
+<li>
+<p>敌对行为（攻击、控制、强制位移等）；</p>
+</li>
+<li>
+<p>构筑（装备、技能与属性等的调整）；</p>
+</li>
+<li>
+<p>交流（对话、交易、盗窃等）。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>什么叫符合直觉的对象？</p>
+<ul>
+<li>对于不同行为，符合直觉的对象是不同的。</li>
+</ul>
+<ol>
+<li>
+<p>一个关键在于和<strong>现实世界</strong>的现象是否相近。</p>
+<ul>
+<li>例如，移动这一行为，地面当然是符合直觉的对象，而具有足够大小的箱子，也应该可以站在上面。</li>
+</ul>
+</li>
+<li>
+<p>另一个要素是<strong>普遍性</strong>，即如果一个行为对于A有效，那么与A相近的B、C也应当有效。</p>
+<ul>
+<li>例如，如果商人可以交易，那么其它NPC也应该可以交易；如果NPC可以被攻击，那么门、箱子等在现实中具备可破坏属性的物体也应该可以被攻击。</li>
+</ul>
+</li>
+<li>
+<p>最后是<strong>对称性</strong>，一些行为往往应该成对出现。</p>
+<ul>
+<li>例如，如果甲可以被点燃，那么它也应该可以被打湿；如果可以被拾取，那么就应该可以被放置；可以被偷窃，就应该可以被赠送。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>什么叫应有的反馈？</p>
+<ol>
+<li>
+<p>符合现实规律。例如，从高处坠落会受到伤害；水能导电、灭火；石头点不燃。</p>
+</li>
+<li>
+<p>和上一问相同，即<strong>普遍性</strong>，即如果一个行为能触发A的某一反馈，那么与A相近的B、C也应当有相似的反馈。例如，buff可以给队友，那么也应该可以给敌人。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>如何在合理有序的前提下，实现物体的丰富反馈？</p>
+<ol>
+<li>
+<p><strong>鸭子模式</strong>（如果一个东西看起来是鸭子，叫声也是鸭子，那么它就是鸭子）。</p>
+<ul>
+<li>
+<p>对于行为而言，应当直接向对象索取需要的数据，而不是对于对象的类型进行判断。</p>
+</li>
+<li>
+<p>例如，投掷需要对象的重量，那么所有拥有重量的物体都可以被投掷。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>接口模式</strong></p>
+<ul>
+<li>
+<p>若对象自身需要对行为产生变化，那么仅需为这一行为添加对应的接口，并实现接口要求的函数功能。</p>
+</li>
+<li>
+<p>例如，点燃这一行为。只需为所有物体添加IBurnable接口，并实现各自燃烧状态会产生的反应（掉血、照明等）。用同样的&quot;火焰箭&quot;点燃三种不同物体——点燃&quot;油桶&quot;→爆炸；点燃地面上的&quot;一摊油渍&quot;→仅产生区域持续燃烧；点燃&quot;木制路障&quot;→路障被烧毁变为可通行。相同的输入行为（点燃），不同的输出结果（爆炸/燃烧/摧毁），但共享相同的接口（IBurnable）。</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>本质上，就是将所有反馈，拆解为一些最基本的数据（血量、抗性、重量等）和状态（燃烧、湿润、投掷中、破坏等）的变化；所有的行为即是对这些基本数据的使用，以及状态的触发。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>玩家如何影响故事走向？</p>
+<ul>
+<li>
+<p>玩家对遭遇的事件的选择会改变之后的内容。</p>
+<ul>
+<li>
+<p>如何改变？</p>
+<ul>
+<li>
+<p>故事由一连串的任务组成；在关键任务触发时设置检查点，根据条件产生不同的结果。</p>
+<ol>
+<li>
+<p>什么叫关键任务，或者如何设置检查点？</p>
+<ul>
+<li>
+<p>对于支线而言，即在接取任务处判断是否能够触发。</p>
+</li>
+<li>
+<p>对于主线而言，即在进入下一个区域时，判断如何进入再下一个区域。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>如何选择检查条件？</p>
+<ol>
+<li>
+<p>前置任务完成情况；</p>
+</li>
+<li>
+<p>关键NPC物品的状态；</p>
+</li>
+<li>
+<p>角色的属性。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>
+<p>玩家在多大程度上影响故事走向？</p>
+<ul>
+<li>就工作量而言，玩家不会真正影响主线的脉络。实际上玩家改变的是结局，以及进入关键区域的方式。</li>
+</ul>
+</li>
+<li>
+<p>如何维持稳定清晰的主线？</p>
+<ul>
+<li>
+<p>正如上一问所说，通过关键区域将故事串联起来。</p>
+</li>
+<li>
+<p>所有的任务都将玩家推向关键区域（地精营地、月初之塔、博德之门），到达之后，会将之前区域的任务结算并检定。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+<h5 class="relative group">小结
+    <div id="小结" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b0%8f%e7%bb%93" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ul>
+<li>
+<p>角色的自定义构筑与养成构成了代入感与真实性的地基，事物丰富的反馈，即对角色构筑与属性的针对性验证（战斗、探索、任务），强化了“玩家通过自由地选择与交互，参与并影响的如同真实世界的冒险故事”这一核心体验。</p>
+<ul>
+<li>
+<p>至此，核心玩法循环基本成型：构筑——验证；</p>
+</li>
+<li>
+<p>而最后的<strong>反馈</strong>，只是为循环注入了燃料（验证后获得的装备、经验值等可以让玩家升级当下构筑，从而激发再验证的欲望；而可能获得的奖励，也会吸引玩家推进探索，迎接检验）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>而游戏的体验绝不仅取决于核心玩法，接下来将分析游戏系统框架是如何与核心玩法结合，从而强化辅助核心玩法循环的各个部分，进而强化目标体验。</p>
+</li>
+</ul>
+
+<h3 class="relative group">核心玩法与游戏系统框架如何结合
+    <div id="核心玩法与游戏系统框架如何结合" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95%e4%b8%8e%e6%b8%b8%e6%88%8f%e7%b3%bb%e7%bb%9f%e6%a1%86%e6%9e%b6%e5%a6%82%e4%bd%95%e7%bb%93%e5%90%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">探索系统
+    <div id="探索系统" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8e%a2%e7%b4%a2%e7%b3%bb%e7%bb%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><strong>核心机制</strong>：</p>
+<ol>
+<li>
+<p><strong>察觉检定</strong>：基于感知属性。自动触发，用于发现隐藏的陷阱、暗门、宝箱与埋伏。察觉检定失败时，玩家可能踏入陷阱或错过秘密区域。</p>
+</li>
+<li>
+<p><strong>环境交互</strong>：推/拉物体（基于力量属性）、投掷物品（基于力量属性）、跳跃（基于力量/敏捷）、攀爬。所有交互均遵循前述&quot;鸭子模式&quot;——任何有重量属性的物体都可被投掷，任何可推动的物体都遵循物理规则。</p>
+</li>
+<li>
+<p><strong>物品交互</strong>：钥匙开门、撬锁（基于敏捷+巧手熟练）、点火/灭火、泼洒液体（油、水、毒）等。</p>
+</li>
+</ol>
+<p><strong>与核心玩法的结合方式</strong>：</p>
+<ul>
+<li>
+<p>探索系统本质上是构筑的验证场景。玩家的属性分配直接影响探索能力：</p>
+<ul>
+<li>
+<p>高力量角色可以推开重物开启捷径，投掷敌人/物体制造战术优势；</p>
+</li>
+<li>
+<p>高敏捷角色可以撬开锁住的箱子、潜行通过危险区域；</p>
+</li>
+<li>
+<p>高感知角色能发现隐藏的道路与宝藏；</p>
+</li>
+<li>
+<p>高智力角色可通过历史/奥术检定解读古代文字，获取隐藏信息。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>这种设计使得探索不是与战斗割裂的独立系统，而是构筑的另一个验证途径。</p>
+</li>
+</ul>
+
+<h4 class="relative group">社交系统
+    <div id="社交系统" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a4%be%e4%ba%a4%e7%b3%bb%e7%bb%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group"><strong>核心机制</strong>
+    <div id="核心机制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e6%9c%ba%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ol>
+<li>
+<p><strong>对话检定</strong>：</p>
+<ul>
+<li>
+<p><strong>说服</strong>：基于魅力属性，以理服人，让NPC接受玩家的提议。</p>
+</li>
+<li>
+<p><strong>欺瞒</strong>：基于魅力属性+欺瞒熟练，通过谎言达成目的。</p>
+</li>
+<li>
+<p><strong>威吓</strong>：基于力量或魅力属性，以武力或气势胁迫NPC。</p>
+</li>
+<li>
+<p><strong>游说</strong>：基于魅力属性，以才艺打动NPC。</p>
+</li>
+<li>
+<p>检定结果直接改变NPC的反应与后续剧情分支。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>同伴好感度系统</strong>：</p>
+<ul>
+<li>
+<p>每个同伴有自己的价值观与偏好，玩家的行为和对话选择会影响好感度。</p>
+</li>
+<li>
+<p>好感度达到阈值可推进同伴个人任务线。</p>
+</li>
+<li>
+<p>好感度过低可能导致同伴离队甚至反目。</p>
+</li>
+<li>
+<p>好感度也影响结局（不同同伴在不同好感度下会有不同的结局走向）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>阵营与道德</strong>：玩家的选择影响世界中NPC对玩家的态度。例如，帮助地精营地与帮助德鲁伊营地是互斥的，选择一方会改变另一方对玩家的态度及后续可用内容。</p>
+</li>
+</ol>
+
+<h5 class="relative group"><strong>与核心玩法的结合方式</strong>
+    <div id="与核心玩法的结合方式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8e%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95%e7%9a%84%e7%bb%93%e5%90%88%e6%96%b9%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ul>
+<li>
+<p>社交系统使魅力型构筑有了独立于战斗的价值。：</p>
+<ul>
+<li>
+<p>说服NPC跳过战斗；</p>
+</li>
+<li>
+<p>获取额外信息与隐藏任务；</p>
+</li>
+<li>
+<p>以更低代价达成目标（如说服商人降价、说服守卫放行）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>同时玩家自身的对话行为选择也是角色构筑的一环，也就是说玩家的意志也会被游戏反馈验证，融入“构筑——验证&quot;循环，这正是核心玩法循环在社交维度的延伸。</p>
+</li>
+</ul>
+
+<h4 class="relative group">战斗系统
+    <div id="战斗系统" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%88%98%e6%96%97%e7%b3%bb%e7%bb%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group"><strong>核心机制</strong>
+    <div id="核心机制-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e6%9c%ba%e5%88%b6-1" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ol>
+<li>
+<p><strong>动作资源</strong>：每轮角色拥有一个标准动作、一个附赠动作、一个自由动作和一个反应，这些资源分配是回合制战术的核心决策。是先移动占据高地（自由动作）、施放远程法术（标准动作）、 喝药水（附赠动作）；还是冒险冲到敌人面前进行连击，每个回合都是资源分配的一次最优解计算。</p>
+</li>
+<li>
+<p><strong>地形与高度</strong>：高地攻击获得命中加值（高地优势）；站在悬崖边缘可被推下造成坠落伤害；复杂地形（云雾、蛛网、油脂）影响移动速度与视线。这些因素使位置本身成为一种战术资源。</p>
+</li>
+<li>
+<p><strong>环境战斗</strong>：爆炸物（油桶、火药桶）可被远程攻击或火焰触发；水体可被通电形成持续伤害区；火焰可点燃油脂形成燃烧区。环境不仅是背景，而是&quot;可激活的战术资产&quot;。</p>
+</li>
+<li>
+<p><strong>遭遇设计</strong>：非对称遭遇是该游戏战斗设计的原则，敌人数量、质量、地形优势往往不对等，迫使玩家利用一切可用资源而非单纯拼属性。</p>
+<ul>
+<li>例如，第一章地精营地门外，大量地精和座狼占据高地且有掩体。</li>
+</ul>
+</li>
+</ol>
+
+<h5 class="relative group"><strong>与核心玩法的结合方式</strong>
+    <div id="与核心玩法的结合方式-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8e%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95%e7%9a%84%e7%bb%93%e5%90%88%e6%96%b9%e5%bc%8f-1" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>战斗系统作为构筑验证的核心场景，角色的每一项属性、技能、装备都在战斗中产生直接的数值和策略影响。举第一章地精营地门外遭遇为例，不同build的解法完全不同：</p>
+<ul>
+<li>
+<p><strong>力量型战士</strong>：利用力量跳跃到高台旁，推退动作将敌方远程单位推下悬崖（力量检定 vs 敌人力量豁免），占据高地利用高地优势近战清理剩余敌人。</p>
+</li>
+<li>
+<p><strong>敏捷型游荡者</strong>：战斗开始前潜行至掩体后方（隐匿检定 vs 敌人察觉），偷袭先手击杀敌方弓箭手（偷袭伤害依赖敏捷+熟练），解除最大威胁后逐个处理近战敌人。</p>
+</li>
+<li>
+<p><strong>智力型法师</strong>：利用睡眠术（智力法术 vs 敌人感知豁免）控制食人魔，火焰箭引爆油桶（远程攻击检定）对聚集的敌人造成范围伤害，保持在高处利用高地优势持续输出。</p>
+</li>
+<li>
+<p><strong>魅力型术士</strong>：利用威吓对话选项在战斗前降低敌人警戒度（魅力检定），获得先手优势。</p>
+</li>
+</ul>
+<p>同一场战斗，每一种build都有一套独特且有效的解法，以获得不同的体验。这正是“构筑——验证”循环在战斗维度的体现。</p>
+
+<h2 class="relative group">亮点
+    <div id="亮点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%ae%e7%82%b9" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><strong>游戏的所有系统（战斗、探索、社交、环境交互、物品交易）使用同一套角色数据</strong>。</li>
+</ul>
+
+<h3 class="relative group">目的
+    <div id="目的" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e7%9a%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>**统一认知，降低学习负担：**玩家不需要单独理解战斗系统、探索系统、社交系统的规则。力量高，所以能推开巨石、能把敌人扔下悬崖、能用拳头吓唬NPC。魅力高，所以法术更强、能说服NPC、能拿到更便宜的价格。玩家不需要在不同的系统之间切换思维模式，角色属性本身就是所有系统的统一接口。</p>
+</li>
+<li>
+<p>**更强的真实感：**真实感的来源不是画面或物理引擎，而是游戏世界对玩家的回应始终保持一致。无论在战斗中、探索中还是对话中，游戏用统一的方式回应玩家（属性值）。</p>
+</li>
+</ol>
+
+<h3 class="relative group">设计思路
+    <div id="设计思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%be%e8%ae%a1%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>接下来，通过3个系统实例来看看这种统一底层数据的设计思路。</li>
+</ul>
+
+<h4 class="relative group">环境交互
+    <div id="环境交互" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%8e%af%e5%a2%83%e4%ba%a4%e4%ba%92" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p>环境物体与角色共享同一套底层数据结构（血量、重量、抗性、状态）。</p>
+<ul>
+<li>
+<p>推开一只地精和推开一个木箱，进行的是同一个力量检定——系统不区分&quot;角色&quot;和&quot;物体&quot;，只读取重量属性。</p>
+</li>
+<li>
+<p>点燃一张蜘蛛网和点燃一件木质家具，走的是同一个IBurnable接口。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>这意味着玩家的构筑决策直接决定了可利用的环境范围：</p>
+<ul>
+<li>
+<p>高力量角色推开巨石开启捷径、投掷油桶制造爆炸（力量同时是战斗属性和探索属性）；</p>
+</li>
+<li>
+<p>高感知角色发现陷阱、密道和机关。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4 class="relative group">叙事
+    <div id="叙事" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%99%e4%ba%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p>对话检定使用与战斗完全相同的属性系统，而非独立的对话技能点。</p>
+<ul>
+<li>
+\[威吓\]<p>选项可以由力量属性支撑；</p>
+</li>
+<li>
+\[历史\]<p>检定依赖智力；</p>
+</li>
+<li>
+\[察觉\]<p>检定依赖感知。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>这意味着不同构筑体验到的故事不同，不仅是难度的不同，还是路径的不同：</p>
+<ul>
+<li>
+<p>高魅力角色可以说服Boss直接跳过战斗；</p>
+</li>
+<li>
+<p>高力量角色可以威吓守卫放行，以蛮力打开对话中无法通过的其他路径；</p>
+</li>
+<li>
+<p>低智力角色根本看不到需要知识检定的对话选项。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>同伴好感度同样与构筑选择产生化学反应。</p>
+<ul>
+<li>例如，高魅力角色拥有选择专门的对话选项，这会让影心赞同，但会让莱埃泽尔不赞同。玩家的属性倾向无形中影响了与不同同伴产生共鸣的可能。</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">法术
+    <div id="法术" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b3%95%e6%9c%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>法术不按&quot;战斗/探索/社交&quot;分类，而是改变玩家与世界互动的某条规则，这条规则在所有场景中统一生效。</p>
+<ul>
+<li>
+<p>羽落术：将&quot;高处坠落&quot;从风险变为工具。战斗中可从高地安全跃下突袭，探索中可抵达原本会摔伤的低处区域。</p>
+</li>
+<li>
+<p>敲击术：用法术位替代撬锁检定。智力型角色获得了一条不依赖敏捷的开锁路径。</p>
+</li>
+<li>
+<p>神导术：增益所有属性检定。它不产生任何伤害或剧情分支，却以极小的幅度渗透进几乎每一次检定。</p>
+</li>
+<li>
+<p>迷踪步：将位置从移动可达变为视线可达。战斗中可传送至高地获得战术优势，探索中可穿越铁栏获取原本无法触及的宝箱。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>法术位作为跨场景的共享资源池，使每道法术的跨场景价值在资源层面形成竞争。</p>
+<ul>
+<li>
+<p>在战斗中消耗一个2环法术位用迷踪步逃生，意味着探索中少了一次穿栏取宝的机会。</p>
+</li>
+<li>
+<p>战斗不再是唯一的检验路径，战斗作为一般RPG的核心地位，让位给了《博德之门3》的核心体验（角色扮演）。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">属性值的数值设计
+    <div id="属性值的数值设计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b1%9e%e6%80%a7%e5%80%bc%e7%9a%84%e6%95%b0%e5%80%bc%e8%ae%be%e8%ae%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">有限分配
+    <div id="有限分配" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%89%e9%99%90%e5%88%86%e9%85%8d" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>初始属性点数和升级属性提升机会都是有限的，这意味着每在一项属性上投入一点，就在其他所有属性上少了一点。</li>
+</ul>
+
+<h4 class="relative group">目的
+    <div id="目的-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e7%9a%84-1" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>**策略性：**拒绝均衡分配的六边形战士，迫使玩家选择取舍，形成独特的构筑。</p>
+</li>
+<li>
+<p>**代入感：**而独特构筑在游戏中，带来不同的体验（靠高魅力说服，还是高力量威胁，或直接战斗），进而强化角色对于玩家的特殊性（即使玩家意志的体现）。</p>
+</li>
+</ol>
+
+<h3 class="relative group">不同职业依赖不同属性
+    <div id="不同职业依赖不同属性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8d%e5%90%8c%e8%81%8c%e4%b8%9a%e4%be%9d%e8%b5%96%e4%b8%8d%e5%90%8c%e5%b1%9e%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>不同职业的战斗力，所依赖的属性是不同的（如，战士需要力量、术士需要魅力、法师需要智力等）。</li>
+</ul>
+
+<h4 class="relative group">目的
+    <div id="目的-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e7%9a%84-2" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>**强化构筑的重要性：**如果每项属性对所有职业都有相同的重要性，那么构筑就没有方向可言（如上一条的目的1）。这种设计确保了，选择一种构筑方向，必然意味着放弃其他方向的可能性（不仅是战斗能力的放弃，还包括探索和社交能力的放弃）。</p>
+</li>
+<li>
+<p>**代入感：**也正是因为角色的构筑自然地带来限制，其属性上的倾向也带来战斗、探索等方面的其他优势。这样的局限与优势，在游戏中不断地验证，形成角色独特个性的代入感。</p>
+</li>
+</ol>
+
+<h2 class="relative group">与《神界原罪2》比较
+    <div id="与神界原罪2比较" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8e%e7%a5%9e%e7%95%8c%e5%8e%9f%e7%bd%aa2%e6%af%94%e8%be%83" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">关键差异
+    <div id="关键差异" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%b3%e9%94%ae%e5%b7%ae%e5%bc%82" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p><strong>数据架构：</strong>《博德之门3》的六项属性在战斗、探索、社交中统一读取；《神界原罪2》将民事能力（交易、鉴定、潜行、撬锁等）与战斗能力分属不同的点数池，二者互不影响，不同系统相互独立。</p>
+</li>
+<li>
+<p><strong>战斗系统：</strong>《神界原罪2》采用双护甲制（物理护甲+魔法护甲），敌人需先破对应类型护甲才能施加控制效果；《博德之门3》采用AC+豁免检定。</p>
+</li>
+<li>
+<p><strong>演出：</strong>《博德之门3》的每个对话都有细腻的动画演出和配音，《神界原罪2》仅有配音。</p>
+</li>
+</ol>
+
+<h3 class="relative group">优势
+    <div id="优势" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bc%98%e5%8a%bf" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>**统一数据带来的认知降低与沉浸强化：**玩家只需理解一套属性系统，即可在所有场景中预测自己能做什么、不能做什么。这种一致性使世界可信的体验贯穿全程，而非仅在战斗或探索中成立。</p>
+</li>
+<li>
+<p>**更低的上手门槛：**统一数据带来的一致性与认知降低，让复杂系统更易理解，配合电影级过场叙事，使更多玩家能够接受。</p>
+</li>
+</ol>
+
+<h3 class="relative group">劣势
+    <div id="劣势" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8a%a3%e5%8a%bf" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>**AC+豁免检定失败的挫败感极强：**游戏前期，因为属性值较低，玩家攻击很容易被豁免（即闪避掉），无法造成伤害。</li>
+</ol>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/07/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;《集合啦！动物森友会》设计分析与活动设计
+              </span>
+            </a>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © 2025 - 2026 IanT All Rights Reserved.
+      </p>
+    
+
+    
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="https://iant72.github.io/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

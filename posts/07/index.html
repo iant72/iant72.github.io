@@ -1,0 +1,2481 @@
+<!doctype html>
+<html
+  lang="cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>《集合啦！动物森友会》设计分析与活动设计 &middot; IanT&#39;s Portfolio</title>
+    <meta name="title" content="《集合啦！动物森友会》设计分析与活动设计 &middot; IanT&#39;s Portfolio">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="Iant&#39;s Portfolio">
+  
+  
+  
+  
+  <link rel="canonical" href="https://iant72.github.io/posts/07/">
+  
+  
+
+  
+  
+    <meta name="author" content="IanT">
+  
+  
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://iant72.github.io/posts/07/">
+	<meta property="og:site_name" content="IanT&#39;s Portfolio">
+	<meta property="og:title" content="《集合啦！动物森友会》设计分析与活动设计">
+	<meta property="og:description" content="Iant&#39;s Portfolio">
+	<meta property="og:locale" content="zh_cn">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="og:image" content="https://iant72.github.io/posts/07/feature.jpg">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://iant72.github.io/posts/07/feature.jpg">
+	<meta name="twitter:title" content="《集合啦！动物森友会》设计分析与活动设计">
+	<meta name="twitter:description" content="Iant&#39;s Portfolio">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.4328b1cfaef3072c5ad82c0c9f71aa621a243cc4f997b831bddc297546ef48cc85156dc77f0d5ab7def6e77dfef28f8e44a4f0151e348ffe8f47f0d8a3980bd2.css"
+    integrity="sha512-Qyixz67zByxa2CwMn3GqYhokPMT5l7gxvdwpdUbvSMyFFW3Hfw1at972533&#43;8o&#43;ORKTwFR40j/6PR/DYo5gL0g==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.8c1f64a5b2f9380667d8dd7d8a3ae62e56ba2e0b8021d8a2f634d63d50fc90dd376d4fddb9ff5a6b0a9ebbc5515e007031e2eb6ae94c1e5238aa2edb8296f7da.js"
+      integrity="sha512-jB9kpbL5OAZn2N19ijrmLla6LguAIdii9jTWPVD8kN03bU/duf9aawqeu8VRXgBwMeLraulMHlI4qi7bgpb32g=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "《集合啦！动物森友会》设计分析与活动设计",
+    "headline": "《集合啦！动物森友会》设计分析与活动设计",
+    
+    "inLanguage": "zh-cn",
+    "url" : "https://iant72.github.io/posts/07/",
+    "author" : {
+      "@type": "Person",
+      "name": "IanT"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "412"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl bg-neutral/25 dark:bg-neutral-800/25"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      IanT&rsquo;s Portfolio
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+  
+  
+  
+  <div class="overflow-hidden h-36 md:h-56 lg:h-72">
+    <img
+      src="/posts/07/feature_hu_c6e81ec0ebc60d40.jpg"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="w-full h-full nozoom object-cover"
+      >
+  </div>
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        《集合啦！动物森友会》设计分析与活动设计
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分享传播的内容设计分析">分享传播的内容设计分析</a>
+      <ul>
+        <li><a href="#分享传播的内容设计及优缺点">分享传播的内容设计及优缺点</a>
+          <ul>
+            <li><a href="#ugc">UGC</a></li>
+            <li><a href="#小动物表现">小动物表现</a></li>
+            <li><a href="#资源差异">资源差异</a></li>
+            <li><a href="#季节与节日">季节与节日</a></li>
+          </ul>
+        </li>
+        <li><a href="#优化思路">优化思路</a>
+          <ul>
+            <li><a href="#内容">内容</a></li>
+            <li><a href="#手段">手段</a></li>
+            <li><a href="#平台">平台</a></li>
+            <li><a href="#激励">激励</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#素材岛玩法设计分析与优化思路">素材岛玩法设计分析与优化思路</a>
+      <ul>
+        <li><a href="#玩法简述">玩法简述</a></li>
+        <li><a href="#设计目的">设计目的</a>
+          <ul>
+            <li><a href="#为什么要先还债做前置任务">为什么要先还债/做前置任务</a></li>
+            <li><a href="#为什么要引入坐船而不是直接增加飞机可以去到的岛屿">为什么要引入坐船，而不是直接增加飞机可以去到的岛屿</a></li>
+            <li><a href="#为什么坐船有次数限制">为什么坐船有次数限制</a></li>
+            <li><a href="#岛屿随机的作用">岛屿随机的作用</a></li>
+            <li><a href="#短期驱动力">短期驱动力</a></li>
+            <li><a href="#中长期驱动力">中长期驱动力</a></li>
+          </ul>
+        </li>
+        <li><a href="#不足">不足</a></li>
+        <li><a href="#优化方案">优化方案</a>
+          <ul>
+            <li><a href="#免费模式下">免费模式下</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#大头菜玩法设计分析与手机平台设计优化思路">大头菜玩法设计分析与手机平台设计优化思路</a>
+      <ul>
+        <li><a href="#玩法概述">玩法概述</a>
+          <ul>
+            <li><a href="#核心循环">核心循环</a></li>
+            <li><a href="#核心体验">核心体验</a></li>
+          </ul>
+        </li>
+        <li><a href="#社交与经济系统">社交与经济系统</a></li>
+        <li><a href="#大头菜玩法在手机平台设计优化">大头菜玩法在手机平台设计优化</a>
+          <ul>
+            <li><a href="#差异">差异</a></li>
+            <li><a href="#思路">思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#赶海玩法活动设计">赶海玩法活动设计</a>
+      <ul>
+        <li><a href="#目标体验">目标体验</a></li>
+        <li><a href="#设计思路">设计思路</a>
+          <ul>
+            <li><a href="#放置与自动化">放置与自动化</a></li>
+            <li><a href="#协作">协作</a></li>
+            <li><a href="#沉淀与期待">沉淀与期待</a></li>
+          </ul>
+        </li>
+        <li><a href="#核心机制">核心机制</a>
+          <ul>
+            <li><a href="#合作赶海">合作赶海</a></li>
+            <li><a href="#度假小屋">度假小屋</a></li>
+            <li><a href="#小动物协作">小动物协作</a></li>
+            <li><a href="#晚餐">晚餐</a></li>
+            <li><a href="#奇遇">奇遇</a></li>
+          </ul>
+        </li>
+        <li><a href="#活动流程与节奏">活动流程与节奏</a>
+          <ul>
+            <li><a href="#总览">总览</a></li>
+            <li><a href="#第一周">第一周</a></li>
+            <li><a href="#第二周">第二周</a></li>
+            <li><a href="#第三周">第三周</a></li>
+            <li><a href="#第四周">第四周</a></li>
+            <li><a href="#活动后"><strong>活动后</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分享传播的内容设计分析">分享传播的内容设计分析</a>
+      <ul>
+        <li><a href="#分享传播的内容设计及优缺点">分享传播的内容设计及优缺点</a>
+          <ul>
+            <li><a href="#ugc">UGC</a></li>
+            <li><a href="#小动物表现">小动物表现</a></li>
+            <li><a href="#资源差异">资源差异</a></li>
+            <li><a href="#季节与节日">季节与节日</a></li>
+          </ul>
+        </li>
+        <li><a href="#优化思路">优化思路</a>
+          <ul>
+            <li><a href="#内容">内容</a></li>
+            <li><a href="#手段">手段</a></li>
+            <li><a href="#平台">平台</a></li>
+            <li><a href="#激励">激励</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#素材岛玩法设计分析与优化思路">素材岛玩法设计分析与优化思路</a>
+      <ul>
+        <li><a href="#玩法简述">玩法简述</a></li>
+        <li><a href="#设计目的">设计目的</a>
+          <ul>
+            <li><a href="#为什么要先还债做前置任务">为什么要先还债/做前置任务</a></li>
+            <li><a href="#为什么要引入坐船而不是直接增加飞机可以去到的岛屿">为什么要引入坐船，而不是直接增加飞机可以去到的岛屿</a></li>
+            <li><a href="#为什么坐船有次数限制">为什么坐船有次数限制</a></li>
+            <li><a href="#岛屿随机的作用">岛屿随机的作用</a></li>
+            <li><a href="#短期驱动力">短期驱动力</a></li>
+            <li><a href="#中长期驱动力">中长期驱动力</a></li>
+          </ul>
+        </li>
+        <li><a href="#不足">不足</a></li>
+        <li><a href="#优化方案">优化方案</a>
+          <ul>
+            <li><a href="#免费模式下">免费模式下</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#大头菜玩法设计分析与手机平台设计优化思路">大头菜玩法设计分析与手机平台设计优化思路</a>
+      <ul>
+        <li><a href="#玩法概述">玩法概述</a>
+          <ul>
+            <li><a href="#核心循环">核心循环</a></li>
+            <li><a href="#核心体验">核心体验</a></li>
+          </ul>
+        </li>
+        <li><a href="#社交与经济系统">社交与经济系统</a></li>
+        <li><a href="#大头菜玩法在手机平台设计优化">大头菜玩法在手机平台设计优化</a>
+          <ul>
+            <li><a href="#差异">差异</a></li>
+            <li><a href="#思路">思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#赶海玩法活动设计">赶海玩法活动设计</a>
+      <ul>
+        <li><a href="#目标体验">目标体验</a></li>
+        <li><a href="#设计思路">设计思路</a>
+          <ul>
+            <li><a href="#放置与自动化">放置与自动化</a></li>
+            <li><a href="#协作">协作</a></li>
+            <li><a href="#沉淀与期待">沉淀与期待</a></li>
+          </ul>
+        </li>
+        <li><a href="#核心机制">核心机制</a>
+          <ul>
+            <li><a href="#合作赶海">合作赶海</a></li>
+            <li><a href="#度假小屋">度假小屋</a></li>
+            <li><a href="#小动物协作">小动物协作</a></li>
+            <li><a href="#晚餐">晚餐</a></li>
+            <li><a href="#奇遇">奇遇</a></li>
+          </ul>
+        </li>
+        <li><a href="#活动流程与节奏">活动流程与节奏</a>
+          <ul>
+            <li><a href="#总览">总览</a></li>
+            <li><a href="#第一周">第一周</a></li>
+            <li><a href="#第二周">第二周</a></li>
+            <li><a href="#第三周">第三周</a></li>
+            <li><a href="#第四周">第四周</a></li>
+            <li><a href="#活动后"><strong>活动后</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">分享传播的内容设计分析
+    <div id="分享传播的内容设计分析" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%86%e4%ba%ab%e4%bc%a0%e6%92%ad%e7%9a%84%e5%86%85%e5%ae%b9%e8%ae%be%e8%ae%a1%e5%88%86%e6%9e%90" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">分享传播的内容设计及优缺点
+    <div id="分享传播的内容设计及优缺点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%86%e4%ba%ab%e4%bc%a0%e6%92%ad%e7%9a%84%e5%86%85%e5%ae%b9%e8%ae%be%e8%ae%a1%e5%8f%8a%e4%bc%98%e7%bc%ba%e7%82%b9" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">UGC
+    <div id="ugc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ugc" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p><strong>分享的原因</strong>：</p>
+<ol>
+<li>
+<p>作为自我的表达，需要被看到来确证；</p>
+</li>
+<li>
+<p>通过展示造物，来获得认可。</p>
+</li>
+</ol>
+<ul>
+<li>内容的可复制性，成为他人认同的来源基础。</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>岛建与房间装扮</strong></p>
+<ul>
+<li>
+<p><strong>设计目的</strong>（分享侧；<strong>后文无特殊说明，皆仅关注分享侧作用与缺点</strong>）：通过预设物件的组合（门槛较低），让相对更广泛的玩家可以参与创造分享。</p>
+</li>
+<li>
+<p><strong>缺点</strong>：操作不便，只能以角色的位置来放置物品和改变地形，对于批量、大范围、精确位置的操作十分麻烦（需要频繁移动调整角色位置）。【但这也是真实感的来源之一，不过就分享来说，加大了分享内容制作的难度，无疑是分享上的缺点。】</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>服装、画与地砖</strong></p>
+<ul>
+<li>
+<p><strong>设计目的</strong>：</p>
+<ol>
+<li>
+<p>提供更自由上限更高的可创作内容，从而有更多、更高质量的传播内容以活跃热度；</p>
+</li>
+<li>
+<p>二维码复制，为游戏本身提供源源不断的更多物品内容，供所有玩家使用；</p>
+</li>
+<li>
+<p>为具有能力与意愿的深度玩家提供更丰富、灵活的表达手段。</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>缺点</strong>：</p>
+<ol>
+<li>
+<p>对不具备相关技能（绘画、设计等）却有意愿的玩家，缺乏教学或其他手段，只能通过游戏外的自行学习，门槛极高。</p>
+</li>
+<li>
+<p>相关内容分享高度依赖一小批创作者，不稳定（一旦他们退坑或兴趣下降，相关内容便消失了）。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>拍照</strong></p>
+<ul>
+<li>
+<p><strong>设计目的</strong>：操作简单，让大部分玩家都能参与创作分享。</p>
+</li>
+<li>
+<p><strong>缺点</strong>：缺乏构图辅助，出片质量参差。</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p><strong>共同优势：</strong></p>
+<ol>
+<li>玩家自发创作，不额外消耗产能。</li>
+</ol>
+</li>
+<li>
+<p><strong>共同缺点</strong>：</p>
+<ol>
+<li>
+<p>操作不便，Switch需截图、退出游戏、进入相册、传到手机、发社交媒体，操作过多。</p>
+</li>
+<li>
+<p>外部的社交平台无法精准搜索自定义图案等内容，分享者收到的反馈也不稳定（老内容随时间沉底）。</p>
+</li>
+</ol>
+</li>
+</ul>
+
+<h4 class="relative group">小动物表现
+    <div id="小动物表现" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b0%8f%e5%8a%a8%e7%89%a9%e8%a1%a8%e7%8e%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li><strong>分享的原因</strong>：通过将触动自己的小动物互动与故事分享，期望获得情感上的确认与认同（有趣、感触等）。</li>
+</ul>
+<ol>
+<li>
+<p><strong>任务事件</strong>（搬家、生日、探病等）</p>
+<ul>
+<li>
+<p><strong>设计目的</strong>：</p>
+<ol>
+<li>
+<p>通过玩家都经历过的被精心设计的事件，让<strong>玩家之间</strong>形成体验感情上的共鸣，从而增强玩家在游戏里跟小动物的故事与互动中获得的情感联系与体验。而情感受到认可（精心设计的同样的桥段往往会激起相似的情绪，共鸣是大概率事件），又会进一步加强分享欲。</p>
+</li>
+<li>
+<p>激发玩家的情感，从而使玩家分享（因为人往往愿意分享触动自己的经历）。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>随机事件</strong>（吵架、唱歌、晨跑等）</p>
+<ul>
+<li>
+<p><strong>设计目的</strong>：</p>
+<ol>
+<li>
+<p>无需进行较长的任务、甚至无需有玩游戏就可以理解其中的趣味，从而广泛传播（玩家、<strong>非玩家</strong>）；</p>
+</li>
+<li>
+<p>玩家不经意间看到有趣场景，激起分享欲（渴望情感或者幽默感被认可）。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p><strong>共同缺点</strong>：</p>
+<ol>
+<li>
+<p>同上一部分。</p>
+</li>
+<li>
+<p>后期重复度高，不再吸引触动玩家。</p>
+</li>
+</ol>
+</li>
+</ul>
+
+<h4 class="relative group">资源差异
+    <div id="资源差异" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b5%84%e6%ba%90%e5%b7%ae%e5%bc%82" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p><strong>分享的原因</strong>：</p>
+<ol>
+<li>
+<p>炫耀；</p>
+</li>
+<li>
+<p>资源互补，满足被需要的感觉。</p>
+</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>稀有物品</strong></p>
+<ul>
+<li>
+<p><strong>设计目的</strong>：炫耀。</p>
+</li>
+<li>
+<p><strong>缺点</strong>：老玩家之间，对于稀有物品的差异微小，无炫耀价值。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>大头菜、初始岛屿资源差异</strong></p>
+<ul>
+<li>
+<p><strong>设计目的</strong>：通过分享与他人不同的资源、或者更高、更低的大头菜价格，以招徕其他有需求的玩家，从而满足被需要感。以此促使玩家分享。</p>
+</li>
+<li>
+<p><strong>缺点</strong>：游戏后期资源差异被抹平，也不缺钱（倒大头菜的动力下降）。</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p><strong>共同缺点</strong>：</p>
+<ol>
+<li>
+<p>同第一部分。</p>
+</li>
+<li>
+<p>无法持续至游戏后期。</p>
+</li>
+</ol>
+</li>
+</ul>
+
+<h4 class="relative group">季节与节日
+    <div id="季节与节日" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%a3%e8%8a%82%e4%b8%8e%e8%8a%82%e6%97%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p><strong>设计目的</strong>：</p>
+<ol>
+<li>
+<p>与现实话题同步，成为可以在更多场合分享的内容。</p>
+</li>
+<li>
+<p>对日常的内容进行改变，变化是天然的分享话题。</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>缺点</strong>：每年会重复，新鲜感会下降，进而对变化麻木而减少分享。</p>
+</li>
+</ul>
+
+<h3 class="relative group">优化思路
+    <div id="优化思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bc%98%e5%8c%96%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>分享与传播主要分为三个部分：内容、手段、平台。接下来会从这三个方面提供优化的思路。</li>
+</ul>
+
+<h4 class="relative group">内容
+    <div id="内容" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%86%85%e5%ae%b9" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>为服装、地砖等自由设计功能，添加AI辅助设计（通过提示词生成），以便让更多的玩家可以参与其中，大大增加分享的内容量；同时，提示词本身也会成为分享内容之一。</p>
+</li>
+<li>
+<p>小动物的随机事件和任务当然越多越好，<strong>但</strong>考虑到产能，为小动物配置玩家常用的功能和话语更加有性价比。</p>
+<ol>
+<li>
+<p>一方面更频繁的互动与帮助，更容易让玩家投入情感（如，防火女、西施惠等），促进分享与接受相关信息的需求。</p>
+</li>
+<li>
+<p>这样的功能和话语还可以成为玩家间的共同语言或梗（如，“向着星辰和大海”、“不是鱼露，是鲈鱼哦”等）来分享传播。</p>
+</li>
+</ol>
+</li>
+</ol>
+
+<h4 class="relative group">手段
+    <div id="手段" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%89%8b%e6%ae%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>在手机端添加一键分享功能，避免过于繁琐的操作让玩家望而却步。</p>
+</li>
+<li>
+<p>小动物的随机互动以及关键任务情节的CG，可以自动保留影像，避免玩家想要分享却玩家截图或录屏而放弃分享。</p>
+</li>
+</ol>
+
+<h4 class="relative group">平台
+    <div id="平台" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b9%b3%e5%8f%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>内置创意工坊（支持搜索、标签、热度排序、收藏、评论、关注等），让创作者可以获得足够的反馈，也让更多的玩家方便地查看内容（从供需两端促进分享）。</p>
+</li>
+<li>
+<p>分享直接接入平台（如米游社）无需退出游戏界面打断体验，进一步降低分享的门槛。</p>
+</li>
+</ol>
+
+<h4 class="relative group">激励
+    <div id="激励" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%bf%80%e5%8a%b1" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p>激励是一把双刃剑，过于真实的奖励往往会将分享的动机，从情感的需求变成利益的驱使。从而导致买量拉票等影响分享内容质量的行为，导致分享社区的慢性死亡。</p>
+</li>
+<li>
+<p>故，激励应以情绪价值主：点赞功能、优质创作者给予成就或称号；</p>
+</li>
+<li>
+<p>或者奖励的门槛放低：“分享1次内容”“点赞3次”等作为日常周常的可选项（避免强制分享）。</p>
+</li>
+</ul>
+<hr>
+
+<h2 class="relative group">素材岛玩法设计分析与优化思路
+    <div id="素材岛玩法设计分析与优化思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b4%a0%e6%9d%90%e5%b2%9b%e7%8e%a9%e6%b3%95%e8%ae%be%e8%ae%a1%e5%88%86%e6%9e%90%e4%b8%8e%e4%bc%98%e5%8c%96%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">玩法简述
+    <div id="玩法简述" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%8e%a9%e6%b3%95%e7%ae%80%e8%bf%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>（还清5,000里数债务后）玩家消耗2000里数兑换机票使用，从20个岛屿中随机选出4个岛，玩家在从中选择一个前往。岛上可能有：</p>
+<ol>
+<li>
+<p>基础资源（石头、树、杂草、鱼、虫）</p>
+</li>
+<li>
+<p>非本地资源（树、花、竹子）</p>
+</li>
+<li>
+<p>稀有资源（稀有花虫鱼、金矿、化石、漂流瓶）</p>
+</li>
+<li>
+<p>小动物</p>
+</li>
+</ol>
+</li>
+<li>
+<p>或者（完成前置任务后）消耗1000里数坐船，随机前往一个岛屿，与坐飞机不同的是：</p>
+<ol>
+<li>
+<p>没有小动物</p>
+</li>
+<li>
+<p>有一个陶俑</p>
+</li>
+<li>
+<p>季节时间可能错位</p>
+</li>
+<li>
+<p>新版本的资源（发光苔藓、食材等）</p>
+</li>
+<li>
+<p>每日只能坐一次船</p>
+</li>
+</ol>
+</li>
+</ul>
+
+<h3 class="relative group">设计目的
+    <div id="设计目的" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%be%e8%ae%a1%e7%9b%ae%e7%9a%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">为什么要先还债/做前置任务
+    <div id="为什么要先还债做前置任务" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%85%88%e8%bf%98%e5%80%ba%e5%81%9a%e5%89%8d%e7%bd%ae%e4%bb%bb%e5%8a%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>避免新手玩家在还不熟悉游戏的核心玩法（收集、建造、小动物）前，面对过多系统而产生迷茫和压力；</p>
+</li>
+<li>
+<p>刚好处于玩家开始需要大量资源建造物品（本岛的资源不足以支撑），符合玩家的需求更流畅地吸引玩家体验素材岛玩法。</p>
+</li>
+<li>
+<p>玩家在还债过程中已自然掌握了伐木、采集、钓鱼、捕虫等基础操作，素材岛开放时玩家已具备基本行动能力，能有目的地收集而非茫然无措。</p>
+</li>
+</ol>
+
+<h4 class="relative group">为什么要引入坐船，而不是直接增加飞机可以去到的岛屿
+    <div id="为什么要引入坐船而不是直接增加飞机可以去到的岛屿" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%bc%95%e5%85%a5%e5%9d%90%e8%88%b9%e8%80%8c%e4%b8%8d%e6%98%af%e7%9b%b4%e6%8e%a5%e5%a2%9e%e5%8a%a0%e9%a3%9e%e6%9c%ba%e5%8f%af%e4%bb%a5%e5%8e%bb%e5%88%b0%e7%9a%84%e5%b2%9b%e5%b1%bf" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>若岛的种类变多，那随机到想要去的岛的概率会下降，玩家迟迟随机不到会产生挫败感；</p>
+</li>
+<li>
+<p>若因此修改飞机随机岛屿的机制以适配更多的岛屿种类，</p>
+<ul>
+<li>
+<p>对新版本回流玩家而言，老机制的修改带来的陌生感，要大于新鲜感，从而产生畏难情绪；</p>
+</li>
+<li>
+<p>对老玩家而言，修改熟悉的机制，会打破一直以来的习惯，这与游戏的核心体验（轻松、安稳的生活）相违背。</p>
+</li>
+</ul>
+</li>
+</ol>
+
+<h4 class="relative group">为什么坐船有次数限制
+    <div id="为什么坐船有次数限制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%9d%90%e8%88%b9%e6%9c%89%e6%ac%a1%e6%95%b0%e9%99%90%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>避免内容被过快的消耗掉；</p>
+</li>
+<li>
+<p>通过每日的限制，变相将它变成每日必做的日常。</p>
+</li>
+</ol>
+
+<h4 class="relative group">岛屿随机的作用
+    <div id="岛屿随机的作用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b2%9b%e5%b1%bf%e9%9a%8f%e6%9c%ba%e7%9a%84%e4%bd%9c%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>提供抽奖般的惊喜感；</li>
+</ol>
+
+<h4 class="relative group">短期驱动力
+    <div id="短期驱动力" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9f%ad%e6%9c%9f%e9%a9%b1%e5%8a%a8%e5%8a%9b" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>游戏前期建设对于基础资源需求；</p>
+</li>
+<li>
+<p>非本地资源获取：素材岛可获得本岛没有的水果、花卉、竹子等，用于丰富本岛生态。</p>
+</li>
+</ol>
+
+<h4 class="relative group">中长期驱动力
+    <div id="中长期驱动力" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ad%e9%95%bf%e6%9c%9f%e9%a9%b1%e5%8a%a8%e5%8a%9b" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>邀请小动物；</p>
+</li>
+<li>
+<p>博物馆收集；</p>
+</li>
+<li>
+<p>稀有物品的收集。</p>
+</li>
+</ol>
+
+<h3 class="relative group">不足
+    <div id="不足" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8d%e8%b6%b3" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>游戏后期资源溢出，大多数岛屿仅提供垃圾时间；</p>
+</li>
+<li>
+<p>单纯的收集物品变得单调枯燥；</p>
+</li>
+<li>
+<p>岛的种类有限，当玩家都见过后，抽奖的惊喜感会消退。</p>
+</li>
+</ol>
+
+<h3 class="relative group">优化方案
+    <div id="优化方案" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bc%98%e5%8c%96%e6%96%b9%e6%a1%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p><strong>分层岛屿</strong>：增加高级里程票（消耗 5000/10000 里程），对应稀有岛屿类型（稀有虫鱼岛、特殊地形岛），给中后期玩家更高价值目标，避免低价值岛屿的垃圾时间；</p>
+</li>
+<li>
+<p><strong>限时活动岛屿</strong>：根据现实季节节日生成主题岛，增加变化性和时效感，延缓全见过后的惊喜消退；</p>
+</li>
+<li>
+<p><strong>解谜岛</strong>：部分岛屿包含小型解谜，丰富操作，缓解单纯采集的枯燥重复；</p>
+</li>
+<li>
+<p><strong>岛屿标记</strong>：可标记岛屿，二次访问需消耗双倍里程，让玩家在前往时取舍：是花较少的里数，随机前往岛屿，还是用更多的里数，去往标记的岛岛屿。</p>
+</li>
+<li>
+<p><strong>合作探索</strong>：支持组队前往素材岛，增加社交粘性。</p>
+</li>
+</ol>
+
+<h4 class="relative group">免费模式下
+    <div id="免费模式下" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%8d%e8%b4%b9%e6%a8%a1%e5%bc%8f%e4%b8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p><strong>次数限制与体力机制</strong>：限制每日去素材岛的次数，控制资源产出节奏，避免内容消耗过快。</p>
+</li>
+<li>
+<p><strong>长线内容供给</strong>：免费模式需持续供给新岛类型。</p>
+</li>
+</ol>
+<hr>
+
+<h2 class="relative group">大头菜玩法设计分析与手机平台设计优化思路
+    <div id="大头菜玩法设计分析与手机平台设计优化思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e5%a4%b4%e8%8f%9c%e7%8e%a9%e6%b3%95%e8%ae%be%e8%ae%a1%e5%88%86%e6%9e%90%e4%b8%8e%e6%89%8b%e6%9c%ba%e5%b9%b3%e5%8f%b0%e8%ae%be%e8%ae%a1%e4%bc%98%e5%8c%96%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">玩法概述
+    <div id="玩法概述" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%8e%a9%e6%b3%95%e6%a6%82%e8%bf%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>每周日上午可以从曹卖处无限制购买大头菜（价格在90-110铃钱之间），接下来周一至周六，每半天价格变动一次，在下周日大头菜会腐烂无法再买。不同人的大头菜卖出价格不同，可以去好友处售卖。</p>
+
+<h4 class="relative group">核心循环
+    <div id="核心循环" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e5%be%aa%e7%8e%af" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><strong>购买</strong>（信息：大头菜售价，拥有的钱；决策点：买不买大头菜，买多少大头菜？是将钱直接用于岛建，还是冒风险炒大头菜赚更多钱？）</p>
+<p>—— <strong>判断</strong>（每次更新价格时（含好友的价格），若亏了：是卖掉及时止损，还是赌它之后会涨；若赚了：是见好就收，还是赌它之后还涨。）</p>
+<p>—— <strong>结算</strong>（亏了：是金盆洗手，还是下次再来；赚了：是见好就收，还是再接再厉）</p>
+
+<h4 class="relative group">核心体验
+    <div id="核心体验" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e4%bd%93%e9%aa%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p>确定投入结合随机结果（且有可能获得暴利）的赌博心理；</p>
+</li>
+<li>
+<p>同时在好友价格很高，或自身亏本的情况下，提高对社交的需求；</p>
+</li>
+<li>
+<p>自身价格高时，分享炫耀，并在他人进入自己岛屿售卖时收获被需要的感觉。</p>
+</li>
+</ul>
+
+<h3 class="relative group">社交与经济系统
+    <div id="社交与经济系统" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a4%be%e4%ba%a4%e4%b8%8e%e7%bb%8f%e6%b5%8e%e7%b3%bb%e7%bb%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>价格差异与跨岛出售可以为大头菜的价格一定程度上兜底，甚至拔高。鼓励玩家分享与收集各自岛的价格。</p>
+<ul>
+<li>各自价格的不同与未知为交流提供信息，赚钱的兴奋与渴望、亏钱的恐惧为交流分享提供情绪动力。</li>
+</ul>
+</li>
+<li>
+<p>炒大头菜可以快速获得大量铃钱，铃钱贬值迅速，相关内容快速消耗。</p>
+</li>
+</ol>
+
+<h3 class="relative group">大头菜玩法在手机平台设计优化
+    <div id="大头菜玩法在手机平台设计优化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%a7%e5%a4%b4%e8%8f%9c%e7%8e%a9%e6%b3%95%e5%9c%a8%e6%89%8b%e6%9c%ba%e5%b9%b3%e5%8f%b0%e8%ae%be%e8%ae%a1%e4%bc%98%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">差异
+    <div id="差异" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b7%ae%e5%bc%82" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>需要长时间的可玩性与动力；</p>
+</li>
+<li>
+<p>需要维持铃钱价值（最终产物铃钱要有价值，但炒大头菜会使其贬值）。</p>
+</li>
+<li>
+<p>手游玩家游玩时间碎片化，需适配异步社交。</p>
+</li>
+</ol>
+
+<h4 class="relative group">思路
+    <div id="思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>无需好友在线，即可前往好友岛屿卖大头菜。</p>
+</li>
+<li>
+<p>限制采购上限，控制获取铃钱的上限</p>
+<ul>
+<li>
+<p><strong>问题：</strong></p>
+<ol>
+<li>
+<p>基于跨岛采购大大提高了赚钱的概率，若控制了采购上限（失去大额收益带来的刺激与吸引），大头菜玩法就变成了每周获得固定收益的纯劳动玩法；</p>
+</li>
+<li>
+<p>限制玩家的目的过于明显强硬，玩家会感觉被惩罚了。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>《星布谷地》（我是云的，没有测试资格，可能有误还望见谅）的做法有参考的意义：</p>
+<ul>
+<li>
+<p>玩家售卖的是自己种植的作物（而作物成长需要时间，种植地也有限制），自然地限制了可售卖物的数量，解决了问题2；</p>
+</li>
+<li>
+<p>而取消作物腐烂的机制，降低了风险以对应被降低的收益。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>但是</strong>，问题1（本质上就是差异1）仍未解决。</p>
+<ul>
+<li>
+<p>回看大头菜玩法，其乐趣之所以成立，是其资源循环是自我完备的，即：买大头菜——卖了赚钱——买更多大头菜——赚更多钱……</p>
+</li>
+<li>
+<p>而《星布谷地》式的大头菜玩法，其资源循环并不在自身玩法中（种地——卖作物赚钱——其他地方花钱），因此“种地——卖作物”本身变成了手段而非目的（原始的“买大头菜——卖了赚钱”既是手段也是目的），大头菜玩法也迅速沦为劳动而非乐趣。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>怎么办呢？</strong></p>
+<ul>
+<li>
+<p>思路也很明确：让资源能够反哺“种地——卖作物”这一循环；同时这一反哺不可以铃钱贬值为代价。</p>
+</li>
+<li>
+<p>那么，不以利益驱动，情绪驱动便是不二之选：</p>
+<pre><code>1. 通过炒大头菜获得一定数量铃钱后，解锁雇佣机制（每周消耗一定铃钱），可以雇佣小动物帮玩家种菜；
+
+2. 之后，随玩家达到一个个铃钱里程碑，可以雇佣小动物收菜、卖菜、买种子等；
+
+    - 关于种菜：玩家可以指定接下来种什么（也可以随机自行安排）？
+
+    - 关于卖菜：每次价格变动，小动物提供当前最高价（含好友价格）询问是否卖出？
+
+        - 也可以设定期望价格托管给小动物（当第一次遇上超过期望价格时卖出）
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>原因：</strong></p>
+<ol>
+<li>
+<p>因为就本质而言，这以玩法只能是每周提供固定收入的系统，最后变得无趣是不可逆的（无论是后期玩家不差钱，还是对这一系列重复操作厌倦），所以以简化操作为驱动，吸引玩家游玩（偷懒是人的天性）。</p>
+<ol>
+<li>
+<p>既可以延长玩法的有趣游玩时间；</p>
+</li>
+<li>
+<p>又为之后新玩法留出时间与精力；</p>
+</li>
+<li>
+<p>丰富了玩家与小动物的互动与情感；</p>
+</li>
+<li>
+<p>同时，对于社交上的作用也保留了下来。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+
+<h2 class="relative group">赶海玩法活动设计
+    <div id="赶海玩法活动设计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b5%b6%e6%b5%b7%e7%8e%a9%e6%b3%95%e6%b4%bb%e5%8a%a8%e8%ae%be%e8%ae%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">目标体验
+    <div id="目标体验" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e6%a0%87%e4%bd%93%e9%aa%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>没有进度压力的轻松感；</p>
+</li>
+<li>
+<p>维持趣味，避免重复感；</p>
+</li>
+<li>
+<p>与好友协作互动完成收获的乐趣；</p>
+</li>
+<li>
+<p>结束后意犹未尽，对下次活动产生期待。</p>
+</li>
+</ol>
+
+<h3 class="relative group">设计思路
+    <div id="设计思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%be%e8%ae%a1%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">放置与自动化
+    <div id="放置与自动化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%94%be%e7%bd%ae%e4%b8%8e%e8%87%aa%e5%8a%a8%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p>赶海玩法作为活动玩法需要面对几个<strong>问题</strong>：</p>
+<ol>
+<li>
+<p>操作和策略简单，不适合连续投入较多时间（活动持续期间反复游玩将变得枯燥）；</p>
+</li>
+<li>
+<p>游戏整体基调悠闲写实，不适合改造为割草玩法（一抓抓一片）——与日常赶海差异过大，刺激过于频繁，反而破坏轻松感；</p>
+</li>
+<li>
+<p>增加海岸生物的个体机制（像《星布谷地》的木头人龙虾）不能太多：</p>
+<ol>
+<li>
+<p>学习成本过高（短时间内学习太多机制）；</p>
+</li>
+<li>
+<p>每个海岸生物都有机制的话，玩家游玩起来会更累（且当玩家熟悉机制后，只是延长了收获的时间，仍是机械劳动）。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>基于以上问题，在玩家对新海岸生物赶海感到无聊前，引入邀请小动物帮忙一起赶海，并随活动进度邀请更多，以达成无需玩家自己赶海（类似放置游戏，每天登录收菜）即可拿满活动奖励。<strong>【目标体验1、2】</strong></p>
+</li>
+</ul>
+
+<h4 class="relative group">协作
+    <div id="协作" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8d%8f%e4%bd%9c" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p>引入需要两人及以上才可以捕获的海岸生物，同时为避免强制社交，可以让小动物替代；</p>
+</li>
+<li>
+<p>邀请好友共进晚餐分享增益（详见晚餐部分）。<strong>【目标体验3】</strong></p>
+</li>
+</ul>
+
+<h4 class="relative group">沉淀与期待
+    <div id="沉淀与期待" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b2%89%e6%b7%80%e4%b8%8e%e6%9c%9f%e5%be%85" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>
+<p>作为生活模拟类游戏，其体验往往要通过可摆放穿戴的物品沉淀下来——尤其是弱刺激的休闲玩法（采集）与慢节奏的经营玩法（种田），不止于多巴胺的来去。</p>
+<ul>
+<li>除活动服装家具外，赶海所在岛屿会有专门的度假小屋（可以用活动代币扩建、装饰等），在活动结束后便不能使用，但仍可以看到（小动物也会在路过时提起赶海活动）。</li>
+</ul>
+</li>
+<li>
+<p>除度假小屋带来的对下一次活动的期待外，活动中每日的晚餐可以在第二天给予增益，以提高玩家对第二天的期待。</p>
+</li>
+<li>
+<p>此外，根据邀请的小动物不同，满足一定条件后（例如抓一定数量的某个海岸生物，或晚餐有某个料理），可以触发专属奇遇剧情，提供额外体验，并让玩家渴望其他小动物的奇遇剧情，从而期待下一次赶海活动。<strong>【目标体验4】</strong></p>
+</li>
+</ul>
+
+<h3 class="relative group">核心机制
+    <div id="核心机制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e6%9c%ba%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">合作赶海
+    <div id="合作赶海" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%90%88%e4%bd%9c%e8%b5%b6%e6%b5%b7" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><strong>目的</strong>：在轻松基调下提供社交协作的乐趣，同时避免强制社交。</p>
+<ul>
+<li>
+<p><strong>协作生物</strong>：单人难以高效捕获的海岸生物。例如：</p>
+<ul>
+<li>
+<p>蟹：</p>
+<ul>
+<li>
+<p>一般状态下，警戒范围为自身周围一定范围的圆；</p>
+</li>
+<li>
+<p>玩家进入警戒范围后进入警戒状态；</p>
+</li>
+<li>
+<p>警戒状态下，永远与触发警戒的玩家保持距离（有多个角色时，以最近的为准），警戒范围变为前方120°的扇形；</p>
+</li>
+<li>
+<p>玩家离开警戒范围后一段时间，变为正常状态；</p>
+</li>
+<li>
+<p>抓捕时需要另一位角色，在警戒范围外靠近抓捕。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>鱼：</p>
+<ul>
+<li>
+<p>存在于几个相邻的沙坑处，可钻入沙坑并从另一个钻出；</p>
+</li>
+<li>
+<p>一般状态下，警戒范围为自身周围一定范围的圆；</p>
+</li>
+<li>
+<p>玩家进入警戒范围后进入警戒状态；</p>
+</li>
+<li>
+<p>警戒状态下，立刻钻入沙坑并从另一个钻出，并变为一般状态，且数秒内无法进入警戒状态；</p>
+</li>
+<li>
+<p>抓捕时由于玩家不一定可以在冷却时间内跑到它出现处，故多名角色共同抓捕效率更高。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>小动物替代</strong>：未组队时，已邀请的小动物可充当协作伙伴。</p>
+</li>
+<li>
+<p><strong>共享收获</strong>：组队捕获的生物共享，双方均获得进度与活动代币，避免竞争。</p>
+</li>
+</ul>
+
+<h4 class="relative group">度假小屋
+    <div id="度假小屋" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ba%a6%e5%81%87%e5%b0%8f%e5%b1%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><strong>目的</strong>：将活动体验沉淀为可见的物品，制造活动结束后的期待感。</p>
+<ul>
+<li>
+<p><strong>位置与初始状态</strong>：赶海岛屿上的固定建筑，活动开始即开启，初始仅一个房间。</p>
+</li>
+<li>
+<p><strong>扩建与装饰</strong>：</p>
+<ul>
+<li>
+<p>随赶海获得的代币累积，到达一定里程碑后，逐渐解锁更多房间；</p>
+</li>
+<li>
+<p>每个房间可邀请一个小动物；</p>
+</li>
+<li>
+<p>家具来源：活动任务奖励、代币累积奖励、奇遇解锁等（只可用于度假小屋）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>活动结束后</strong>：小屋变为关闭状态，可外观浏览但不能进入互动。小动物经过时会触发闲聊台词（例如，&ldquo;还记得那次赶海吗……&quot;），持续唤起记忆。</p>
+</li>
+</ul>
+
+<h4 class="relative group">小动物协作
+    <div id="小动物协作" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b0%8f%e5%8a%a8%e7%89%a9%e5%8d%8f%e4%bd%9c" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><strong>目的</strong>：以渐进式自动化解决重复劳动问题，将玩家从机械收集中解放，使其专注于有趣的部分。</p>
+<ul>
+<li>
+<p><strong>解锁节奏</strong>：第1周可邀请1个，此后随房间解锁增加，最多可邀请5个。</p>
+</li>
+<li>
+<p><strong>分工与特长</strong>：不同小动物擅长捕获不同类型的生物，玩家需根据当日目标合理指派。</p>
+</li>
+<li>
+<p><strong>工作方式</strong>：</p>
+<ul>
+<li>
+<p>将小动物指派到赶海区域后，它会按一定速率自动捕获海岸生物；</p>
+</li>
+<li>
+<p>玩家每日登录收取收获箱即可，类似放置游戏的收菜循环。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>效率上限</strong>：自动捕获速率有上限，确保拿满奖励仍需玩家在活动周期内保持参与，而非首日完全挂机。</p>
+</li>
+</ul>
+
+<h4 class="relative group">晚餐
+    <div id="晚餐" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%99%9a%e9%a4%90" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><strong>目的</strong>：以&quot;今日烹饪→明日增益&quot;制造每日期待感，同时提供社交协作场景。</p>
+<ul>
+<li>
+<p><strong>烹饪规则</strong>：</p>
+<ul>
+<li>
+<p>每日傍晚可用当日捕获的生物作为食材烹饪晚餐；</p>
+</li>
+<li>
+<p>不同食材组合对应不同料理，提供不同的次日增益（例如，效率提升、某类生物捕获率提升）；</p>
+</li>
+<li>
+<p>特定料理会触发小动物的奇遇。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>社交分享</strong>：</p>
+<ul>
+<li>
+<p>邀请好友共进晚餐，双方均获得增益；</p>
+</li>
+<li>
+<p>好友带来的食材可弥补自己缺少的，促进互助。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>用餐中</strong>：用餐时角色们会进行闲谈与吃饭动画（类似《天穗之咲稻姬》），营造悠闲的生活感。</p>
+</li>
+<li>
+<p><strong>夏日特色料理</strong>：部分限定料理（如，刨冰、海鲜烧烤等）仅在活动中出现，随代币积累、奇遇等逐渐解锁。</p>
+</li>
+</ul>
+
+<h4 class="relative group">奇遇
+    <div id="奇遇" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a5%87%e9%81%87" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><strong>目的</strong>：以条件触发的专属剧情激发&quot;想集齐所有故事&quot;的收集欲；并让活动有更多情感记忆点。</p>
+<ul>
+<li>
+<p><strong>触发条件</strong>：小动物+特定条件（捕获特定数量的某个海岸生物、晚餐制作某料理等）；</p>
+<ul>
+<li>
+<p>例如：</p>
+<ul>
+<li>
+<p>邀请了猫 + 累计捕获10个海贝 → 触发&quot;贝壳收藏&rdquo;；</p>
+</li>
+<li>
+<p>晚餐烹饪了贝壳汤 + 邀请了狗 → 触发&quot;狗与海&quot;。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>可以从对话中获得条件的提示；</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>内容形式</strong>：</p>
+<ul>
+<li>
+<p>1-2分钟的轻叙事小剧场（对话+少量演出），讲述小动物与赶海相关的个人故事；</p>
+</li>
+<li>
+<p>每个小动物有多段奇遇。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>奖励</strong>：每段奇遇解锁一件限定家具或服装（与故事主题相关），以及一张奇遇相片存入度假小屋相册。</p>
+</li>
+<li>
+<p><strong>期待钩子</strong>：</p>
+<ul>
+<li>
+<p>奇遇列表中未触发的条目显示为&quot;？？？&quot;，仅给出模糊提示，激发好奇心；</p>
+</li>
+<li>
+<p>部分奇遇所需条件跨周才能满足（如需要第3周才解锁的食材），形成持续探索动机；</p>
+</li>
+<li>
+<p>活动结束时若有未触发的奇遇，下次活动可以继续。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">活动流程与节奏
+    <div id="活动流程与节奏" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b4%bb%e5%8a%a8%e6%b5%81%e7%a8%8b%e4%b8%8e%e8%8a%82%e5%a5%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>活动时长</strong>：4周</li>
+</ul>
+
+<h4 class="relative group">总览
+    <div id="总览" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e8%a7%88" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<table>
+	<thead>
+			<tr>
+					<th>阶段</th>
+					<th>时间</th>
+					<th>核心体验</th>
+					<th>解锁内容</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>第 1 周</td>
+					<td>第 1-7 天</td>
+					<td>学习基础赶海，建立&quot;赶海→晚餐→增益→再赶海&quot;循环，感受夏日海岛氛围</td>
+					<td>新海岸生物、第 1 只小动物、基础晚餐、度假小屋（初始）、夏日特色食谱</td>
+			</tr>
+			<tr>
+					<td>第 2 周</td>
+					<td>第 8-14 天</td>
+					<td>引入协作，小屋扩建，触发首批奇遇</td>
+					<td>协作生物、小屋 2 房间、烧烤食谱、社区目标开启</td>
+			</tr>
+			<tr>
+					<td>第 3 周</td>
+					<td>第 15-21 天</td>
+					<td>自动化成型，社交晚餐，奇遇集中触发</td>
+					<td>更多协作生物、房间解锁加速、海滩派对</td>
+			</tr>
+			<tr>
+					<td>第 4 周</td>
+					<td>第 22-28 天</td>
+					<td>收菜满足 + 奇遇收尾 + 终局高潮</td>
+					<td>奇遇最终阶段</td>
+			</tr>
+			<tr>
+					<td>活动后</td>
+					<td>—</td>
+					<td>度假小屋保留外观，小动物闲聊唤起记忆</td>
+					<td>—</td>
+			</tr>
+	</tbody>
+</table>
+
+<h4 class="relative group">第一周
+    <div id="第一周" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e5%91%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">目标
+    <div id="目标" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e6%a0%87" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ul>
+<li>
+<p>让玩家学会基础赶海操作，建立&quot;赶海——晚餐——增益——再赶海&quot;的核心循环；</p>
+</li>
+<li>
+<p>感受夏日海岛氛围与轻松基调。</p>
+</li>
+</ul>
+
+<h5 class="relative group">流程
+    <div id="流程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%81%e7%a8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ol>
+<li>
+<p>活动开场，玩家乘船抵达赶海岛屿，NPC带入度假小屋，介绍小屋功能（烹饪、相册、房间等）；</p>
+</li>
+<li>
+<p>傍晚触发首次晚餐烹饪引导，制作最简单的料理并获得次日增益；</p>
+</li>
+<li>
+<p>第二天，邀请第一个小动物协作；</p>
+</li>
+<li>
+<p>第二天开始新海岸生物逐日出现。</p>
+</li>
+</ol>
+
+<h4 class="relative group">第二周
+    <div id="第二周" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e5%91%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">目标
+    <div id="目标-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e6%a0%87-1" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ul>
+<li>
+<p>引入协作生物，体验与好友或小动物配合捕获的乐趣；</p>
+</li>
+<li>
+<p>房间逐渐解锁，更多小动物，开始学习按能力分配工作；</p>
+</li>
+<li>
+<p>触发首批奇遇，激发收集欲。</p>
+</li>
+</ul>
+
+<h5 class="relative group">流程
+    <div id="流程-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%81%e7%a8%8b-1" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ol>
+<li>
+<p>协作生物出现，引导玩家尝试协作捕获；</p>
+</li>
+<li>
+<p>新料理解锁；</p>
+</li>
+<li>
+<p>首批奇遇条件可达成。</p>
+</li>
+</ol>
+
+<h4 class="relative group">第三周
+    <div id="第三周" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%89%e5%91%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">目标
+    <div id="目标-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e6%a0%87-2" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ul>
+<li>
+<p>自动化基本成型，玩家从日常收集中解放，奇遇与社交玩法；</p>
+</li>
+<li>
+<p>奇遇集中触发期，相册逐渐丰满。</p>
+</li>
+</ul>
+
+<h5 class="relative group">流程
+    <div id="流程-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%81%e7%a8%8b-2" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ol>
+<li>
+<p>自动捕获覆盖率足以应对日常需求；</p>
+</li>
+<li>
+<p>多数奇遇在本周可触发；</p>
+</li>
+<li>
+<p>小屋可扩建至满级，装饰自由度达到最高。</p>
+</li>
+</ol>
+
+<h4 class="relative group">第四周
+    <div id="第四周" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e5%9b%9b%e5%91%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">目标
+    <div id="目标-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%ae%e6%a0%87-3" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ul>
+<li>
+<p>享受自动化带来的每天收菜满足感；</p>
+</li>
+<li>
+<p>制造活动后意犹未尽感。</p>
+</li>
+</ul>
+
+<h5 class="relative group">流程
+    <div id="流程-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%81%e7%a8%8b-3" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<ol>
+<li>
+<p>自动化满配，玩家几乎无需手动赶海即可拿满奖励；</p>
+</li>
+<li>
+<p>奇遇进入最后阶段。</p>
+</li>
+</ol>
+
+<h4 class="relative group"><strong>活动后</strong>
+    <div id="活动后" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b4%bb%e5%8a%a8%e5%90%8e" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>活动内容退场，度假小屋保留在岛屿上。小动物路过时触发赶海相关闲聊。</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/04/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;《原神》活动设计
+              </span>
+            </a>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/03/">
+              <span class="leading-6">
+                《博德之门3》设计分析&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © 2025 - 2026 IanT All Rights Reserved.
+      </p>
+    
+
+    
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="https://iant72.github.io/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

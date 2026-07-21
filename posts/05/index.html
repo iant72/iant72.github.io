@@ -1,0 +1,1421 @@
+<!doctype html>
+<html
+  lang="cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>《原神》深境螺旋设计分析与迭代思路 &middot; IanT&#39;s Portfolio</title>
+    <meta name="title" content="《原神》深境螺旋设计分析与迭代思路 &middot; IanT&#39;s Portfolio">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="Iant&#39;s Portfolio">
+  
+  
+  
+  
+  <link rel="canonical" href="https://iant72.github.io/posts/05/">
+  
+  
+
+  
+  
+    <meta name="author" content="IanT">
+  
+  
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://iant72.github.io/posts/05/">
+	<meta property="og:site_name" content="IanT&#39;s Portfolio">
+	<meta property="og:title" content="《原神》深境螺旋设计分析与迭代思路">
+	<meta property="og:description" content="Iant&#39;s Portfolio">
+	<meta property="og:locale" content="zh_cn">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="og:image" content="https://iant72.github.io/posts/05/feature.jpg">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://iant72.github.io/posts/05/feature.jpg">
+	<meta name="twitter:title" content="《原神》深境螺旋设计分析与迭代思路">
+	<meta name="twitter:description" content="Iant&#39;s Portfolio">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.4328b1cfaef3072c5ad82c0c9f71aa621a243cc4f997b831bddc297546ef48cc85156dc77f0d5ab7def6e77dfef28f8e44a4f0151e348ffe8f47f0d8a3980bd2.css"
+    integrity="sha512-Qyixz67zByxa2CwMn3GqYhokPMT5l7gxvdwpdUbvSMyFFW3Hfw1at972533&#43;8o&#43;ORKTwFR40j/6PR/DYo5gL0g==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.8c1f64a5b2f9380667d8dd7d8a3ae62e56ba2e0b8021d8a2f634d63d50fc90dd376d4fddb9ff5a6b0a9ebbc5515e007031e2eb6ae94c1e5238aa2edb8296f7da.js"
+      integrity="sha512-jB9kpbL5OAZn2N19ijrmLla6LguAIdii9jTWPVD8kN03bU/duf9aawqeu8VRXgBwMeLraulMHlI4qi7bgpb32g=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "《原神》深境螺旋设计分析与迭代思路",
+    "headline": "《原神》深境螺旋设计分析与迭代思路",
+    
+    "inLanguage": "zh-cn",
+    "url" : "https://iant72.github.io/posts/05/",
+    "author" : {
+      "@type": "Person",
+      "name": "IanT"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "137"
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl bg-neutral/25 dark:bg-neutral-800/25"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      IanT&rsquo;s Portfolio
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+  
+  
+  
+  <div class="overflow-hidden h-36 md:h-56 lg:h-72">
+    <img
+      src="/posts/05/feature_hu_d9ddcefbd273a9ab.jpg"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="w-full h-full nozoom object-cover"
+      >
+  </div>
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        《原神》深境螺旋设计分析与迭代思路
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#深境螺旋的设计目的">深境螺旋的设计目的</a>
+      <ul>
+        <li><a href="#1-8层">1-8层</a></li>
+        <li><a href="#9-10层">9-10层</a></li>
+        <li><a href="#11-12层">11-12层</a></li>
+        <li><a href="#小结">小结</a></li>
+      </ul>
+    </li>
+    <li><a href="#深境螺旋的现状与定位变化">深境螺旋的现状与定位变化</a>
+      <ul>
+        <li><a href="#高不成">高不成</a></li>
+        <li><a href="#膨胀还是不膨胀">膨胀还是不膨胀</a></li>
+        <li><a href="#草夜魂与月">草、夜魂与月</a></li>
+        <li><a href="#外驱力与策略退化">外驱力与策略退化</a></li>
+        <li><a href="#小结-1">小结</a></li>
+      </ul>
+    </li>
+    <li><a href="#迭代方向">迭代方向</a></li>
+    <li><a href="#迭代思路">迭代思路</a>
+      <ul>
+        <li><a href="#解释">解释</a>
+          <ul>
+            <li><a href="#迭代思路1">迭代思路1</a></li>
+            <li><a href="#迭代思路2">迭代思路2</a></li>
+            <li><a href="#迭代思路3">迭代思路3</a></li>
+          </ul>
+        </li>
+        <li><a href="#例子">例子</a>
+          <ul>
+            <li><a href="#词条第一周">词条（第一周）</a></li>
+            <li><a href="#之后可能的词条">之后可能的词条</a></li>
+            <li><a href="#设计目的">设计目的</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#深境螺旋的设计目的">深境螺旋的设计目的</a>
+      <ul>
+        <li><a href="#1-8层">1-8层</a></li>
+        <li><a href="#9-10层">9-10层</a></li>
+        <li><a href="#11-12层">11-12层</a></li>
+        <li><a href="#小结">小结</a></li>
+      </ul>
+    </li>
+    <li><a href="#深境螺旋的现状与定位变化">深境螺旋的现状与定位变化</a>
+      <ul>
+        <li><a href="#高不成">高不成</a></li>
+        <li><a href="#膨胀还是不膨胀">膨胀还是不膨胀</a></li>
+        <li><a href="#草夜魂与月">草、夜魂与月</a></li>
+        <li><a href="#外驱力与策略退化">外驱力与策略退化</a></li>
+        <li><a href="#小结-1">小结</a></li>
+      </ul>
+    </li>
+    <li><a href="#迭代方向">迭代方向</a></li>
+    <li><a href="#迭代思路">迭代思路</a>
+      <ul>
+        <li><a href="#解释">解释</a>
+          <ul>
+            <li><a href="#迭代思路1">迭代思路1</a></li>
+            <li><a href="#迭代思路2">迭代思路2</a></li>
+            <li><a href="#迭代思路3">迭代思路3</a></li>
+          </ul>
+        </li>
+        <li><a href="#例子">例子</a>
+          <ul>
+            <li><a href="#词条第一周">词条（第一周）</a></li>
+            <li><a href="#之后可能的词条">之后可能的词条</a></li>
+            <li><a href="#设计目的">设计目的</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <blockquote><p>本文通过分析深境螺旋的设计目的与在当下游戏中的定位，找出需要优化的部分，进而提出迭代方向与思路。</p>
+</blockquote>
+<h2 class="relative group">深境螺旋的设计目的
+    <div id="深境螺旋的设计目的" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b7%b1%e5%a2%83%e8%9e%ba%e6%97%8b%e7%9a%84%e8%ae%be%e8%ae%a1%e7%9b%ae%e7%9a%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>
+<p>深渊的主要目的是通过具有一定难度的战斗，验证玩家的养成成果与战斗理解；换句话说，为玩家展示其养成成果与战斗理解提供舞台。</p>
+</li>
+<li>
+<p>深渊因其带有珍贵奖励，在失败时作为负反馈，引导玩家提升战斗力【战斗力具体可分为：角色（等级、命座、技能等级）、武器（等级、叠卡）、圣遗物、操作、理解（对角色以及敌人机制的理解）】、推进养成进度。</p>
+<ol>
+<li>
+<p>战斗理解本质是一种学习，而当玩家可以通过学习达成某个成果时（打败敌人、大额伤害等），学习本身也就会产生乐趣。</p>
+</li>
+<li>
+<p>另一方面，当玩家越发理解战斗机制时，他可以根据自己的理解，通过排轴打出高效伤害、通过元素反应瓦解敌人机制，从而使战斗中精准操作（小脑的满足）、对策化解（智力满足）、伤害特效（视听激励）带来的乐趣加强。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>通过调整每期的敌人特性、词单效果使当期up角色能够更容易地通关，从而增强玩家的抽取意愿（进而增加充值的可能性），并且也是对已抽取的玩家的抽取行为给予肯定积极的反馈（巩固以后抽取当期角色的意愿）。</p>
+</li>
+</ol>
+<ul>
+<li>接下来，将根据不同玩家、不同游戏阶段讨论深渊的作用。</li>
+</ul>
+
+<h3 class="relative group">1-8层
+    <div id="1-8层" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-8%e5%b1%82" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>敌人种类固定，等级从25随层数涨至70级，奖励是一次性的，故主要是针对于<strong>游戏前期即新手玩家</strong>。</li>
+</ul>
+<p>其作用在于：</p>
+<ol>
+<li>
+<p>通过珍贵奖励与较强的敌人，引导玩家推进养成进度（这也是奖励一次性的原因，当玩家的养成进度达到通关要求后，之前的关卡的难度便不足以让玩家推进养成，也就不必要求玩家反复通关。），并对玩家已达成的养成成果予以体现和奖励。</p>
+</li>
+<li>
+<p>通过比野怪更难的敌人，加深战斗机制（基本的元素反应等）的理解。</p>
+</li>
+</ol>
+<ul>
+<li>主要验证战斗力中的：角色及技能等级、武器等级、基本操作，以及基本的战斗理解。</li>
+</ul>
+
+<h3 class="relative group">9-10层
+    <div id="9-10层" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-10%e5%b1%82" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>每月更换敌人种类，并刷新奖励，敌人等级从72到85级逐层递增。在上期满星通关第11层可跳过9层，满星通关第12层可跳过10层。主要对于<strong>游戏中期即新手向老玩家过渡的阶段</strong>，以及<strong>对于强度和战斗不感兴趣的玩家</strong>。</p>
+<ul>
+<li>其作用与1-8层基本相同，只是针对的玩家及游戏阶段不同。</li>
+</ul>
+</li>
+<li>
+<p>因此导致的主要差异来自以下几个问题：</p>
+<ol>
+<li>
+<p>为什么可以跳过：当玩家的养成进度达到满星通关第11、12层要求后，9、10层的难度便不足以让玩家推进养成，也就不必要求玩家反复通关。</p>
+</li>
+<li>
+<p>为什么不像1-8层变为一次性内容：</p>
+<ol>
+<li>
+<p>将角色从9层养成至11层的强度水平，所需要的时间要大于深渊更新的周期，需要这部分的原石来使抽卡充值的意愿提高（接近大保底）。</p>
+</li>
+<li>
+<p>对强度和战斗不感兴趣的玩家，对于刷取足够强力的圣遗物的意愿不高，9-10层便作为这类玩家深渊的终点，周期性地获取原石资源（同上）。</p>
+<ul>
+<li>同时，当玩家达到这一强度后，便不至于在探索、主线、材料刷取等非战斗作为核心体验的部分，因战斗困难而导致体验受阻（进而有更多的设计空间，以提供更丰富的内容）。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+<h3 class="relative group">11-12层
+    <div id="11-12层" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-12%e5%b1%82" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>每月更换敌人种类，并刷新奖励，敌人等级从88到100级逐层递增。主要对于<strong>游戏中后期即已入门的玩家</strong>。</p>
+<ul>
+<li>其作用与1-8层基本相同，只是针对的玩家及游戏阶段不同。</li>
+</ul>
+</li>
+<li>
+<p>因此导致的主要差异有：</p>
+<ol>
+<li>
+<p>主要验证的战斗力变为：角色适配及命座、武器适配、圣遗物适配与强度、更精准的操作，以及配队、排轴等进阶战斗理解。</p>
+<ol>
+<li>
+<p>其中角色适配及命座、武器适配，与商业化高度相关，是用于提高玩家抽取当期角色与专武的意愿。</p>
+</li>
+<li>
+<p>圣遗物的适配与强度，将玩家导向可供大量消耗的刷取内容中，以维持玩家的活跃度。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+<h3 class="relative group">小结
+    <div id="小结" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b0%8f%e7%bb%93" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>验证养成成果与战斗理解。</p>
+</li>
+<li>
+<p>引导新手掌握基本战斗机制与技巧。</p>
+</li>
+<li>
+<p>引导玩家推进养成进度，消耗养成资源刷取内容。</p>
+</li>
+<li>
+<p>提高玩家抽取当期角色与专武的意愿。</p>
+</li>
+</ol>
+
+<h2 class="relative group">深境螺旋的现状与定位变化
+    <div id="深境螺旋的现状与定位变化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b7%b1%e5%a2%83%e8%9e%ba%e6%97%8b%e7%9a%84%e7%8e%b0%e7%8a%b6%e4%b8%8e%e5%ae%9a%e4%bd%8d%e5%8f%98%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>随游戏内容与玩家的成长，深渊渐渐难以达成目的。同时游戏也对此做出了一些改变，但这也导致了深渊自身的定位发生了变化。接下来便要讨论深渊当下的定位与不足。</p>
+
+<h3 class="relative group">高不成
+    <div id="高不成" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%ab%98%e4%b8%8d%e6%88%90" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>对于拥有高命座或高战斗理解与操作的玩家而言，深渊最高的难度已经起不到验证的作用。而增加难度无疑会引起非强度战斗偏好玩家的不满。</p>
+<ul>
+<li>
+<p><strong>幽境危战</strong>满足了这一需求。其4-6难度没有原石奖励（而是偏向情绪价值的武器皮肤），避免了对非强度战斗偏好玩家的捆绑，也使其免于利益驱动（而是通过验证自身战斗力的内驱力驱动）。</p>
+</li>
+<li>
+<p>故一部分高难验证作用被让渡。</p>
+</li>
+</ul>
+
+<h3 class="relative group">膨胀还是不膨胀
+    <div id="膨胀还是不膨胀" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%86%a8%e8%83%80%e8%bf%98%e6%98%af%e4%b8%8d%e8%86%a8%e8%83%80" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>角色的强度成长是收敛的（即存在一个上限），当玩家已拥有接近强度峰值的角色时，如何让他用动力养成新的角色，甚至抽取新角色变成了一个问题。</p>
+<p>机制与数值的差异化便是必要的解决途径。</p>
+<ul>
+<li>
+<p>而机制并不直观，甚至需要学习（人是懒惰的）。</p>
+</li>
+<li>
+<p>而数值的膨胀，会让玩家在抽取时产生角色很快会被淘汰的焦虑与不满（导致抽取意愿下降）。</p>
+</li>
+</ul>
+<p><strong>幻想真境剧诗</strong>提供了学习熟悉角色机制的途径，同时对角色数量的要求使得大量角色有了出场的机会。</p>
+<ul>
+<li>
+<p>故一部分进阶机制的学习，以及养成的引导的作用被让渡。</p>
+<ul>
+<li>但是，幻想真境剧诗与传统的战斗（一到两队）差异较大，存在入门阵痛。</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">草、夜魂与月
+    <div id="草夜魂与月" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%8d%89%e5%a4%9c%e9%ad%82%e4%b8%8e%e6%9c%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>1-8层没有安排草属性、夜魂机制以及月反应的战斗验证，对于当下的新人而言是有所缺失的。</p>
+
+<h3 class="relative group">外驱力与策略退化
+    <div id="外驱力与策略退化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%96%e9%a9%b1%e5%8a%9b%e4%b8%8e%e7%ad%96%e7%95%a5%e9%80%80%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>不可否认战斗是原神乐趣的重要来源，而战斗的同时获得原石，使得深渊同时存在战斗乐趣驱动（内驱力）和原石利益驱动（外驱力）。而人往往会倾向于将行为归因于更明显的外驱力，故而使得深渊在体验上成为了劳动场所。</p>
+<ul>
+<li>此时，为了让当期角色更有吸引力的buff与敌人，会使得玩家更倾向于选择他而不愿意再了解其它战斗机制。</li>
+</ul>
+
+<h3 class="relative group">小结
+    <div id="小结-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b0%8f%e7%bb%93-1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>高难验证作用被让渡给幽境危战。</p>
+</li>
+<li>
+<p>部分进阶机制的学习，以及养成的引导的作用被让渡到幻想真境剧诗。</p>
+</li>
+<li>
+<p>草属性、夜魂机制以及月反应的战斗验证缺失。</p>
+</li>
+<li>
+<p>外驱力使得机制学习的作用受影响。</p>
+</li>
+</ol>
+
+<h2 class="relative group">迭代方向
+    <div id="迭代方向" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%ad%e4%bb%a3%e6%96%b9%e5%90%91" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>结合上述的深渊的设计目的，以及当下的种种不足与定位变化，深渊的迭代方向也渐渐清晰。</p>
+<ol>
+<li>
+<p>作为玩家过渡到幻想真境剧诗与幽境危战的战斗养成的准备。</p>
+<ol>
+<li>
+<p>因此，需要为玩家了解不同角色的机制提供环境；</p>
+</li>
+<li>
+<p>将高难部分舍弃。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>补足1-8层草属性、夜魂机制以及月反应的战斗验证。</p>
+</li>
+<li>
+<p>为愿意游玩幻想真境剧诗与幽境危战的玩家腾出时间与精力。</p>
+</li>
+<li>
+<p>维持对当期角色与专武的吸引力。</p>
+</li>
+<li>
+<p>补足游玩深渊的内驱力。</p>
+</li>
+</ol>
+
+<h2 class="relative group">迭代思路
+    <div id="迭代思路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%ad%e4%bb%a3%e6%80%9d%e8%b7%af" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>
+<p>在1-8层中，将部分敌人替换为须弥及之后版本的新敌人（草系敌人、纳塔夜魂系敌人），使新玩家在前期即可接触并理解草元素反应、夜魂机制与月反应。</p>
+</li>
+<li>
+<p>降低9-12层的敌人难度，12-3的敌人难度小于等于幽境危战n3。</p>
+</li>
+<li>
+<p>增加特殊的第13层，其具体内容如下：</p>
+<ol>
+<li>
+<p>敌人难度在幽境危战n3与n4之间；</p>
+</li>
+<li>
+<p>无原石奖励；</p>
+</li>
+<li>
+<p>通关后下一期深渊可跳过11、12层；</p>
+</li>
+<li>
+<p>改变原来的祝福机制为天平机制（类似《神之天枰》）：</p>
+<ol>
+<li>
+<p>从新一期深渊开始起，每一周增加数个增益与减益词条（最开始的词条以及之后的部分词条，需要对当期角色有足够的倾斜）；</p>
+</li>
+<li>
+<p>根据效果强弱，每个词条拥有1-3不同的权重值；</p>
+</li>
+<li>
+<p>玩家选取的减益与增益词条的权重值必须相等才可以开始作战；</p>
+</li>
+<li>
+<p>结算界面展示参战角色，各角色造成的伤害，所选词条，以及天平的权重值。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+<h3 class="relative group">解释
+    <div id="解释" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%a7%a3%e9%87%8a" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">迭代思路1
+    <div id="迭代思路1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%ad%e4%bb%a3%e6%80%9d%e8%b7%af1" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>显而易见，补全新机制验证。</li>
+</ul>
+
+<h4 class="relative group">迭代思路2
+    <div id="迭代思路2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%ad%e4%bb%a3%e6%80%9d%e8%b7%af2" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li>将深渊最高难度锚定于幽境危战n3，确保深渊作为大众验证舞台而非高难挑战的定位（高难验证已由幽境危战n4承担）。同时，降低后的9-12层仍保留养成验证价值（配队合理性、元素反应理解、基本操作仍然是通关前提，只是不再要求极限练度）。</li>
+</ul>
+
+<h4 class="relative group">迭代思路3
+    <div id="迭代思路3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%ad%e4%bb%a3%e6%80%9d%e8%b7%af3" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<ol>
+<li>
+<p>**保持深渊接受度的稳定：**不对1-12层的机制做修改，避免玩家对陌生的变化的天然排斥；同时不设原石奖励，为反复挑战的内驱力排除隐患，同时避免影响版本中原石资源的安排。</p>
+</li>
+<li>
+<p><strong>挑战的初始动机</strong>：通关可跳过11、12层，让玩家有尝试挑战的初步动力。同时，减少在深渊所消耗的时间（之前是2层，现在是1层）。</p>
+</li>
+<li>
+<p><strong>商业化与乐趣的平衡</strong>：词条对于当期角色的倾斜，让拥有当期角色的玩家可以更快更容易地通关，以强化玩家的抽取意愿，并且也是对已抽取的玩家的抽取行为给予肯定积极的反馈。</p>
+<ul>
+<li>同时，更丰富的词条允许没有抽取当期角色的玩家搭配出较容易通关的队伍（尽管会晚几周等词条），进而引导玩家研究不同角色的机制。</li>
+</ul>
+</li>
+<li>
+<p><strong>机制隐形教学</strong>：增益与减益两类词条，可以辅助玩家理解角色机制，让玩家在筛选减益词条时自己发现某个减益对角色影响很小，让玩家觉得自己很聪明（类似于《土豆兄弟》，某强化增加子弹威力但降低近战攻速，那么玩枪械流角色的玩家就可以零成本增强；以帮助玩家发现角色真正依赖的机制与属性）。</p>
+</li>
+<li>
+<p><strong>社交传播</strong>：结算界面便于玩家间分享传播，间接激励玩家挑战不同的配队与更高的权重值（类似危机合约）。</p>
+</li>
+<li>
+<p><strong>作为过渡到幻想真境剧诗的桥梁</strong>：天平机制在“推销”当期角色的同时，又起到引导玩家研究不同角色机制（进而养成更多角色）的作用，以此为幻想真境剧诗奠定角色理解与养成基础，使过渡更丝滑。</p>
+</li>
+</ol>
+<ul>
+<li>
+<p><strong>与祝福机制的对比</strong>：</p>
+<ul>
+<li>
+<p>玩家可以自主选择增益与减益，在不自觉间加深对角色机制的认识，同时减弱强行推销的感觉。</p>
+</li>
+<li>
+<p>更高的可重玩性（词条与配队组合更多样）。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">例子
+    <div id="例子" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%be%8b%e5%ad%90" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>
+<p>当期角色：宵宫</p>
+<ul>
+<li>宵宫的核心机制：弓箭；普攻输出；战技核心；火元素伤害</li>
+</ul>
+</li>
+</ul>
+
+<h4 class="relative group">词条（第一周）
+    <div id="词条第一周" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%af%8d%e6%9d%a1%e7%ac%ac%e4%b8%80%e5%91%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">增益词条
+    <div id="增益词条" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a2%9e%e7%9b%8a%e8%af%8d%e6%9d%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>弓强化：弓箭角色普攻伤害+40%；权重：3</p>
+<p>火强化：火元素反应伤害+25%；权重：2</p>
+<p>攻速强化：普攻攻速+10%；权重：1</p>
+<p>战技强化：战技持续时间+10%；权重：1</p>
+
+<h5 class="relative group">减益词条
+    <div id="减益词条" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%87%8f%e7%9b%8a%e8%af%8d%e6%9d%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>大招弱化：元素爆发伤害-40%；权重：3</p>
+<p>充能弱化：充能效率-20%；权重：2</p>
+<p>防御弱化：防御力-10%；权重：1</p>
+<p>雷弱化：雷元素反应伤害-10%；权重：1</p>
+
+<h4 class="relative group">之后可能的词条
+    <div id="之后可能的词条" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b9%8b%e5%90%8e%e5%8f%af%e8%83%bd%e7%9a%84%e8%af%8d%e6%9d%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>例如，融化伤害+30%、激化伤害+30%、角色无法闪避、石化期间对敌人每秒造成最大生命值4%的伤害等</p>
+
+<h4 class="relative group">设计目的
+    <div id="设计目的" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%be%e8%ae%a1%e7%9b%ae%e7%9a%84" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>让拥有当期角色的玩家感到物有所值，而没有的玩家可以在研究替代方案的过程中理解不同角色的机制差异（为幻想真境剧诗奠定角色理解与养成基础）。</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/02/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;《终末地》工厂系统选评
+              </span>
+            </a>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/04/">
+              <span class="leading-6">
+                《原神》活动设计&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © 2025 - 2026 IanT All Rights Reserved.
+      </p>
+    
+
+    
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="https://iant72.github.io/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

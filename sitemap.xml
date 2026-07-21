@@ -8,7 +8,42 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://iant72.github.io/posts/03/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iant72.github.io/posts/07/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iant72.github.io/posts/04/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iant72.github.io/posts/05/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iant72.github.io/posts/02/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://iant72.github.io/posts/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iant72.github.io/posts/08/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iant72.github.io/posts/06/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

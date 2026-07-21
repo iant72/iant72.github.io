@@ -12,6 +12,76 @@
     <atom:link href="https://iant72.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>《博德之门3》设计分析</title>
+      <link>https://iant72.github.io/posts/03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>iant729495@hotmail.com (IanT)</author>
+      <guid>https://iant72.github.io/posts/03/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://iant72.github.io/posts/03/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>《集合啦！动物森友会》设计分析与活动设计</title>
+      <link>https://iant72.github.io/posts/07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>iant729495@hotmail.com (IanT)</author>
+      <guid>https://iant72.github.io/posts/07/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://iant72.github.io/posts/07/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>《原神》活动设计</title>
+      <link>https://iant72.github.io/posts/04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>iant729495@hotmail.com (IanT)</author>
+      <guid>https://iant72.github.io/posts/04/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://iant72.github.io/posts/04/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>《原神》深境螺旋设计分析与迭代思路</title>
+      <link>https://iant72.github.io/posts/05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>iant729495@hotmail.com (IanT)</author>
+      <guid>https://iant72.github.io/posts/05/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://iant72.github.io/posts/05/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>《终末地》工厂系统选评</title>
+      <link>https://iant72.github.io/posts/02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>iant729495@hotmail.com (IanT)</author>
+      <guid>https://iant72.github.io/posts/02/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://iant72.github.io/posts/02/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>玩家分类（归纳）</title>
+      <link>https://iant72.github.io/posts/08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>iant729495@hotmail.com (IanT)</author>
+      <guid>https://iant72.github.io/posts/08/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://iant72.github.io/posts/08/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>游戏经历</title>
+      <link>https://iant72.github.io/posts/06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>iant729495@hotmail.com (IanT)</author>
+      <guid>https://iant72.github.io/posts/06/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://iant72.github.io/posts/06/feature.jpg" />
+    </item>
+    
+    <item>
       <title>自动化系统大一统理论与应用：以《终末地》为例</title>
       <link>https://iant72.github.io/posts/01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
