@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IanT&#39;s Portfolio</title>
-    <link>https://iant72.github.io/</link>
-    <description>Recent content on IanT&#39;s Portfolio</description>
+    <title>Posts on IanT&#39;s Portfolio</title>
+    <link>https://iant72.github.io/posts/</link>
+    <description>Recent content in Posts on IanT&#39;s Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>iant729495@hotmail.com (IanT)</managingEditor>
     <webMaster>iant729495@hotmail.com (IanT)</webMaster>
     <copyright>© 2025 - 2026 IanT All Rights Reserved.</copyright>
-    <atom:link href="https://iant72.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iant72.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>自动化系统大一统理论与应用：以《终末地》为例</title>
